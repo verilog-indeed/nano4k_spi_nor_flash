@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash.v",
+  "InstLine" : 8,
+  "InstName" : "nano4k_spi_flash",
+  "ModuleFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash.v",
+  "ModuleLine" : 8,
+  "ModuleName" : "nano4k_spi_flash"
+ }
+]
