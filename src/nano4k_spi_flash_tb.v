@@ -53,9 +53,10 @@ module nano4k_spi_flash_tb;
         #1500 addr = 22'h3A5;
         #1740 i_enable_n = 0;
         #1650 spiMiso = 1;
-        #10 spiMiso = 0;
+        #15 spiMiso = 0;
         #10 spiMiso = 1;
         #20 spiMiso = 0;
+        #100 spiMiso = 1;
         #2990 i_enable_n = 1;
         #5400 $finish;
     end

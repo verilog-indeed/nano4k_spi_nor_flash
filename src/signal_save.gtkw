@@ -1,18 +1,18 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Sun Jul 17 12:42:08 2022
+[*] Sun Jul 17 16:11:17 2022
 [*]
 [dumpfile] "D:\Nano4KProjects\nano4k_spi_nor_flash\src\sim_result.vcd"
-[dumpfile_mtime] "Sun Jul 17 12:39:48 2022"
-[dumpfile_size] 25817
+[dumpfile_mtime] "Sun Jul 17 16:09:34 2022"
+[dumpfile_size] 30452
 [savefile] "D:\Nano4KProjects\nano4k_spi_nor_flash\src\signal_save.gtkw"
-[timestart] 6805000
+[timestart] 8142700
 [size] 1280 781
 [pos] -1 -1
-*-19.000000 7840000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-16.000000 8255000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] nano4k_spi_flash_tb.
 [sst_width] 197
-[signals_width] 230
+[signals_width] 246
 [sst_expanded] 1
 [sst_vpaned_height] 217
 @28
@@ -26,12 +26,26 @@ nano4k_spi_flash_tb.i_enable_n
 @22
 nano4k_spi_flash_tb.cmd[7:0]
 nano4k_spi_flash_tb.dut.currentCmd[7:0]
-nano4k_spi_flash_tb.dut.serializerByteBuffer[7:0]
-nano4k_spi_flash_tb.dut.serializerCycleCount[3:0]
 @28
 nano4k_spi_flash_tb.dut.mosiOut[7:0]
-nano4k_spi_flash_tb.dut.WrDataReady
-@29
 nano4k_spi_flash_tb.spiMiso
+nano4k_spi_flash_tb.dut.RdDataValid
+@29
+nano4k_spi_flash_tb.dut.fData_RD[7:0]
+@22
+nano4k_spi_flash_tb.dut.deserializerCycleCount[3:0]
+@c00028
+nano4k_spi_flash_tb.dut.deserializerBuffer[7:0]
+@28
+(0)nano4k_spi_flash_tb.dut.deserializerBuffer[7:0]
+(1)nano4k_spi_flash_tb.dut.deserializerBuffer[7:0]
+(2)nano4k_spi_flash_tb.dut.deserializerBuffer[7:0]
+(3)nano4k_spi_flash_tb.dut.deserializerBuffer[7:0]
+(4)nano4k_spi_flash_tb.dut.deserializerBuffer[7:0]
+(5)nano4k_spi_flash_tb.dut.deserializerBuffer[7:0]
+(6)nano4k_spi_flash_tb.dut.deserializerBuffer[7:0]
+(7)nano4k_spi_flash_tb.dut.deserializerBuffer[7:0]
+@1401200
+-group_end
 [pattern_trace] 1
 [pattern_trace] 0

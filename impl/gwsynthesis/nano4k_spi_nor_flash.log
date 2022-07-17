@@ -2,12 +2,13 @@ GowinSynthesis start
 Running parser ...
 Analyzing Verilog file 'D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v'
 Compiling module 'nano4k_spi_flash'("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":8)
-WARN  (EX3780) : Using initial value of 'numOfDmmyBytes' since it is never assigned("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":231)
+WARN  (EX3780) : Using initial value of 'numOfDmmyBytes' since it is never assigned("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":249)
 WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":80)
 WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":97)
-WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":153)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":174)
-WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":175)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":106)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":161)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":182)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":191)
 NOTE  (EX0101) : Current top module is "nano4k_spi_flash"
 [5%] Running netlist conversion ...
 WARN  (CV0016) : Input reset_n is unused("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":9)

@@ -100,7 +100,11 @@ module nano4k_spi_flash(
                 DATA_PHASE: begin
                     if (isReadCmd) begin
                         deserializerEnable <= 1;
-                        fData_RD <= deserializerBuffer;
+                        if (RdDataValid) begin
+                            //fData_RD <= deserializerBuffer;
+                            //This isn't nice, but deserializer is one clock behind
+                            fData_RD <= {deserializerBuffer, MISO};
+                        end
                     end else begin
                         serializerEnable <= 1;
                         serializerByteBuffer <= fData_WR;
@@ -122,22 +126,26 @@ module nano4k_spi_flash(
     reg[2:0] dmmyCycleCount;
     reg[2:0] numOfDmmyBytes;
 
-    reg mclkEnable_n;
+    //serializer active-low clock control
+    reg serMclkEnable_n;
+    //deserializer active-low clock control
+    wire desMclkEnable_n = !deserializerEnable;
 
     //CPOL=1 idle-high SPI clock
-    assign MCLK = serialClk | mclkEnable_n;
+    //MCLK active when either or both serializer/deserializer clock controls are active
+    assign MCLK = serialClk | (serMclkEnable_n && desMclkEnable_n);
 
     reg serializerEnable;
     reg[7:0] serializerByteBuffer;
     reg[7:0] mosiOut;
     reg[3:0] serializerCycleCount;
 
-    //serialization 
+    //serialization block
     //load output data and enable SPI clock out on cycle 0
     always@(negedge serialClk) begin
         if (serializerEnable) begin
             if (serializerCycleCount == 0) begin
-                mclkEnable_n <= 0;
+                serMclkEnable_n <= 0;
                 WrDataReady <= 0;
                 mosiOut <= serializerByteBuffer << 1;
                 MOSI <= serializerByteBuffer[7];
@@ -153,7 +161,8 @@ module nano4k_spi_flash(
                 serializerCycleCount <= serializerCycleCount + 1;
             end
         end else begin
-            mclkEnable_n <= 1;
+            mosiOut <= 0;
+            serMclkEnable_n <= 1;
             WrDataReady <= 0;
             serializerCycleCount <= 0;
             MOSI <= 0;
@@ -165,17 +174,24 @@ module nano4k_spi_flash(
     reg[3:0] deserializerCycleCount;
     reg[7:0] deserializerBuffer;
 	//deserialization block
-    always@(posedge MCLK) begin
+    always@(posedge serialClk) begin
         if (deserializerEnable) begin
-            if (deserializerCycleCount == 7) begin
-                deserializerCycleCount <= 0;
-                RdDataValid <= 1;
-            end else begin
-                deserializerBuffer <= {deserializerBuffer, MISO} << 1;
-                deserializerCycleCount <= deserializerCycleCount + 1;
+            if (deserializerCycleCount == 0) begin
                 RdDataValid <= 0;
             end
+            deserializerBuffer <= {deserializerBuffer, MISO};
+
+            if (deserializerCycleCount == 6) begin
+                RdDataValid <= 1;
+            end
+
+            if (deserializerCycleCount == 7) begin
+                deserializerCycleCount <= 0;
+            end else begin
+                deserializerCycleCount <= deserializerCycleCount + 1;
+            end
         end else begin
+            deserializerBuffer <= 0;
             RdDataValid <= 0;
             deserializerCycleCount <= 0;
         end
@@ -218,15 +234,17 @@ module nano4k_spi_flash(
     initial begin
         serializerCycleCount <= 0;
         serializerByteBuffer <= 0;
+        deserializerBuffer <= 0;
         addrCycleCount <= 0;
         dmmyCycleCount <= 0;
         numOfDmmyBytes <= 1;
-        mclkEnable_n <= 1;
+        serMclkEnable_n <= 1;
         WrDataReady <= 0;
         RdDataValid <= 0;
         serializerEnable <= 0;
         mosiOut <= 0;
-        currentCmd <= 0;
+        currentCmd <= 0; 
         MOSI <= 0;
+        fData_RD <= 0;
     end
 endmodule
