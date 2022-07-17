@@ -2,17 +2,15 @@ GowinSynthesis start
 Running parser ...
 Analyzing Verilog file 'D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v'
 Compiling module 'nano4k_spi_flash'("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":8)
-WARN  (EX3780) : Using initial value of 'numOfDmmyBytes' since it is never assigned("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":219)
-WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":86)
-WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":102)
-WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":151)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":171)
-WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":172)
+WARN  (EX3780) : Using initial value of 'numOfDmmyBytes' since it is never assigned("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":231)
+WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":80)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":97)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":153)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":174)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":175)
 NOTE  (EX0101) : Current top module is "nano4k_spi_flash"
 [5%] Running netlist conversion ...
 WARN  (CV0016) : Input reset_n is unused("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":9)
-WARN  (CV0016) : Input fAddress is unused("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":14)
-WARN  (CV0016) : Input fData_WR is unused("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":15)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed

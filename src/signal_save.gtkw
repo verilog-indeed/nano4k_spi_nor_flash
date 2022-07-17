@@ -1,0 +1,37 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sun Jul 17 12:42:08 2022
+[*]
+[dumpfile] "D:\Nano4KProjects\nano4k_spi_nor_flash\src\sim_result.vcd"
+[dumpfile_mtime] "Sun Jul 17 12:39:48 2022"
+[dumpfile_size] 25817
+[savefile] "D:\Nano4KProjects\nano4k_spi_nor_flash\src\signal_save.gtkw"
+[timestart] 6805000
+[size] 1280 781
+[pos] -1 -1
+*-19.000000 7840000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] nano4k_spi_flash_tb.
+[sst_width] 197
+[signals_width] 230
+[sst_expanded] 1
+[sst_vpaned_height] 217
+@28
+nano4k_spi_flash_tb.i_clock
+nano4k_spi_flash_tb.spiClk
+nano4k_spi_flash_tb.spiMosi
+@22
+nano4k_spi_flash_tb.dut.flashState[3:0]
+@28
+nano4k_spi_flash_tb.i_enable_n
+@22
+nano4k_spi_flash_tb.cmd[7:0]
+nano4k_spi_flash_tb.dut.currentCmd[7:0]
+nano4k_spi_flash_tb.dut.serializerByteBuffer[7:0]
+nano4k_spi_flash_tb.dut.serializerCycleCount[3:0]
+@28
+nano4k_spi_flash_tb.dut.mosiOut[7:0]
+nano4k_spi_flash_tb.dut.WrDataReady
+@29
+nano4k_spi_flash_tb.spiMiso
+[pattern_trace] 1
+[pattern_trace] 0
