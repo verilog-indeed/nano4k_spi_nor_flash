@@ -1,7 +1,15 @@
 {
  "Files" : [
   {
+   "Path" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/gowin_clkdiv/gowin_clkdiv.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash_top.v",
    "Type" : "verilog"
   }
  ],

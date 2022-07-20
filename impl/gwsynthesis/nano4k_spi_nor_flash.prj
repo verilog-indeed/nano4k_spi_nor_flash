@@ -4,7 +4,9 @@
     <Version>beta</Version>
     <Device id="GW1NSR-4C" package="QFN48P" speed="7" partNumber="GW1NSR-LV4CQN48PC7/I6"/>
     <FileList>
+        <File path="D:\Nano4KProjects\nano4k_spi_nor_flash\src\gowin_clkdiv\gowin_clkdiv.v" type="verilog"/>
         <File path="D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v" type="verilog"/>
+        <File path="D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v" type="verilog"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>

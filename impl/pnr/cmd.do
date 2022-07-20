@@ -1,0 +1,13 @@
+-d D:\Nano4KProjects\nano4k_spi_nor_flash\impl\gwsynthesis\nano4k_spi_nor_flash.vg
+-p GW1NSR-4C-QFN48P-7
+-pn GW1NSR-LV4CQN48PC7/I6
+-cst D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_nor_flash.cst
+-cfg D:\Nano4KProjects\nano4k_spi_nor_flash\impl\pnr\device.cfg
+-sdc D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_nor_flash.sdc
+-bit
+-tr
+-ph
+-sdf
+-o
+-timing
+-cst_error

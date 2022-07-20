@@ -1,10 +1,28 @@
 [
  {
-  "InstFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash.v",
-  "InstLine" : 8,
-  "InstName" : "nano4k_spi_flash",
-  "ModuleFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash.v",
-  "ModuleLine" : 8,
-  "ModuleName" : "nano4k_spi_flash"
+  "InstFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash_top.v",
+  "InstLine" : 1,
+  "InstName" : "nano4k_spi_flash_top",
+  "ModuleFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash_top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "nano4k_spi_flash_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash_top.v",
+    "InstLine" : 15,
+    "InstName" : "divide_by_eight",
+    "ModuleFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/gowin_clkdiv/gowin_clkdiv.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "Gowin_CLKDIV"
+   },
+   {
+    "InstFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash_top.v",
+    "InstLine" : 86,
+    "InstName" : "dut",
+    "ModuleFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash.v",
+    "ModuleLine" : 8,
+    "ModuleName" : "nano4k_spi_flash"
+   }
+  ]
  }
 ]

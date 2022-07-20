@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="nano4k_spi_flash" Register="85" Lut="112"/>
+<Module name="nano4k_spi_flash_top" Register="40" Alu="28" Lut="39">
+    <SubModule name="divide_by_eight"/>
+    <SubModule name="dut" Register="50" Lut="71"/>
+</Module>

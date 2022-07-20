@@ -1,0 +1,3977 @@
+//Copyright (C)2014-2022 Gowin Semiconductor Corporation. 
+//All rights reserved. 
+//File Title: Sdf file
+//GOWIN Version: V1.9.8.06-1
+//Part Number: GW1NSR-LV4CQN48PC7/I6
+//Device: GW1NSR-4C
+//Created Time: Wed Jul 20 12:24:48 2022
+
+(DELAYFILE 
+  (SDFVERSION "3.0")
+  (DESIGN "nano4k_spi_flash_top")
+  (VENDOR "Gowin")
+  (PROGRAM "Gowin SDF Writer")
+  (VERSION "1.0")
+  (DIVIDER /)
+  (VOLTAGE 1.26:1.20:1.14)
+  (PROCESS "best=0.65: nom=1.0: worst=1.8")
+  (TEMPERATURE -40:25:85)
+  (TIMESCALE 1 ns)
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE n341_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n112_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE n140_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE ledOut_d_0_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE n114_s5)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE i_enable_n_s4)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n63_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n63_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE n68_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n112_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n112_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE i_enable_n_s5)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE i_enable_n_s6)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE i_enable_n_s7)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n63_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n63_s4)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE n63_s5)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n63_s6)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n63_s7)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n68_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n68_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n112_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n112_s4)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE n112_s5)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE n112_s6)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n112_s7)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE i_enable_n_s8)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE i_enable_n_s9)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE i_enable_n_s10)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE i_enable_n_s12)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n139_s12)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE n135_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE i_enable_n_s13)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE n68_s4)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE n62_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE n63_s8)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_20_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_19_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_18_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_17_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_16_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_15_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_14_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_13_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_12_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_11_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_10_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_9_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_8_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_7_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_6_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_5_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_4_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_3_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_2_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_0_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE readBuff_2_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE readBuff_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE readBuff_0_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE wr_data_7_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE wr_data_6_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE wr_data_5_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE wr_data_4_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE wr_data_3_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE wr_data_2_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE wr_data_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE flashAddr_7_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE testStateCounter_21_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE flashCmd_7_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE flashCmd_6_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE flashCmd_1_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE flashCmd_0_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE readStrobeIndicator_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFSE")
+   (INSTANCE i_enable_n_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge SET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge SET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE wr_data_0_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n28_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n27_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n26_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n25_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n24_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n23_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n22_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n21_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n20_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n19_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n18_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n17_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n16_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n15_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n14_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n13_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n12_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n11_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n10_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n9_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n8_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n61_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n60_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n59_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n58_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n57_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n56_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "ALU")
+   (INSTANCE n55_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 COUT (0.499:0.637:0.774))
+      (IOPATH I1 COUT (0.224:0.316:0.408))
+      (IOPATH I3 COUT (0.441:0.575:0.710))
+      (IOPATH CIN COUT (0.023:0.033:0.042))
+      (IOPATH I0 SUM (0.383:0.461:0.539))
+      (IOPATH I1 SUM (0.292:0.406:0.519))
+      (IOPATH I3 SUM (0.520:0.628:0.737))
+      (IOPATH CIN SUM (0.316:0.366:0.417))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "INV")
+   (INSTANCE n157_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (0.000:0.000:0.000))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT1")
+   (INSTANCE n44_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT1")
+   (INSTANCE n29_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "CLKDIV")
+   (INSTANCE divide_by_eight\/clkdiv_inst)
+    (DELAY
+     (ABSOLUTE
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge CALIB) (posedge HCLKIN) (0.000:0.000:0.000) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge CALIB) (posedge HCLKIN) (0.000:0.000:0.000) (0.000:0.000:0.000))
+     (RECOVERY (posedge RESETN) (posedge HCLKIN) (0.000:0.000:0.000))
+     (REMOVAL (posedge RESETN) (posedge HCLKIN) (0.009:0.009:0.009))
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n610_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n604_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n572_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n589_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/fMclk_d_s)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n356_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n359_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n360_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n361_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n362_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n363_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n364_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n366_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n370_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/WrDataReady_s4)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/RdDataValid_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/serializerByteBuffer_7_s5)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n198_s12)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n200_s11)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n202_s12)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n206_s12)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n36_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n365_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n84_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n83_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/currentAddr_23_s5)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n214_s13)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n216_s13)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n374_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n373_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n372_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n424_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n423_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n422_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n610_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n572_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n572_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n120_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/serializerByteBuffer_7_s6)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n196_s13)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n198_s13)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n200_s12)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n200_s13)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n202_s14)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT2")
+   (INSTANCE dut\/n206_s13)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n415_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n202_s15)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n194_s14)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/serializerByteBuffer_7_s9)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n200_s14)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n214_s15)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n198_s15)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n176_s13)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.536:0.675:0.814))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n581_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.412:0.511:0.609))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n37_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n120_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.538:0.651:0.765))
+      (IOPATH I2 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n85_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT3")
+   (INSTANCE dut\/n123_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n194_s17)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n196_s15)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.412:0.511:0.609))
+      (IOPATH I1 F (0.536:0.675:0.814))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n210_s14)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n208_s14)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n212_s14)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.276:0.370:0.464))
+      (IOPATH I2 F (0.412:0.511:0.609))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n204_s14)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.538:0.651:0.765))
+      (IOPATH I3 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n45_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.538:0.651:0.765))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.536:0.675:0.814))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT4")
+   (INSTANCE dut\/n53_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.536:0.675:0.814))
+      (IOPATH I1 F (0.412:0.511:0.609))
+      (IOPATH I2 F (0.276:0.370:0.464))
+      (IOPATH I3 F (0.538:0.651:0.765))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/currentCmd_3_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/currentCmd_2_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/currentCmd_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/currentCmd_0_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/currentAddr_23_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/currentAddr_15_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/currentAddr_7_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/serializerByteBuffer_7_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/serializerByteBuffer_6_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/serializerByteBuffer_5_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/serializerByteBuffer_4_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/serializerByteBuffer_3_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/serializerByteBuffer_2_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/serializerByteBuffer_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/serializerByteBuffer_0_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE dut\/addrCycleCount_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE dut\/dmmyCycleCount_2_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE dut\/dmmyCycleCount_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE dut\/deserializerEnable_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/fData_RD_2_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/fData_RD_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFE")
+   (INSTANCE dut\/fData_RD_0_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/deserializerBuffer_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/deserializerBuffer_0_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/deserializerCycleCount_3_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/deserializerCycleCount_2_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/deserializerCycleCount_1_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/deserializerCycleCount_0_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFF")
+   (INSTANCE dut\/CS_n_s0)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE dut\/RdDataValid_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE dut\/flashState_0_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFRE")
+   (INSTANCE dut\/serializerEnable_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNSE")
+   (INSTANCE dut\/serMclkEnable_n_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge SET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge SET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/mosiOut_7_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/mosiOut_6_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/mosiOut_5_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/mosiOut_4_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/mosiOut_3_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/mosiOut_2_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/mosiOut_1_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/MOSI_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/serializerCycleCount_3_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/serializerCycleCount_2_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/serializerCycleCount_1_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNR")
+   (INSTANCE dut\/serializerCycleCount_0_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFNRE")
+   (INSTANCE dut\/WrDataReady_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (negedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge CE) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge CE) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (posedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (negedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/addrCycleCount_0_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/dmmyCycleCount_0_s1)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/flashState_2_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "DFFR")
+   (INSTANCE dut\/flashState_1_s3)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH CLK Q (0.247:0.293:0.340))
+     )
+    )
+    (TIMINGCHECK
+     (SETUPHOLD (posedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (negedge D) (posedge CLK) (0.185:0.241:0.296) (0.000:0.000:0.000))
+     (SETUPHOLD (posedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+     (SETUPHOLD (negedge RESET) (posedge CLK) (0.028:0.030:0.032) (0.009:0.010:0.011))
+    )
+  )
+  (CELL
+   (CELLTYPE "INV")
+   (INSTANCE dut\/n381_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (0.000:0.000:0.000))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "INV")
+   (INSTANCE dut\/n430_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (0.000:0.000:0.000))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT1")
+   (INSTANCE dut\/n375_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "LUT1")
+   (INSTANCE dut\/n425_s2)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I0 F (0.276:0.370:0.464))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "INV")
+   (INSTANCE dut\/n192_s14)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (0.000:0.000:0.000))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "IBUF")
+   (INSTANCE crystalClk_ibuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (0.626:0.678:0.729))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "IBUF")
+   (INSTANCE reset_ibuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (0.626:0.678:0.729))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "IBUF")
+   (INSTANCE fMiso_ibuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (0.626:0.678:0.729))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "OBUF")
+   (INSTANCE ledOut_0_obuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (2.496:2.537:2.578))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "OBUF")
+   (INSTANCE ledOut_1_obuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (2.496:2.537:2.578))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "OBUF")
+   (INSTANCE ledOut_2_obuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (2.496:2.537:2.578))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "OBUF")
+   (INSTANCE readStrobeIndicator_obuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (2.496:2.537:2.578))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "OBUF")
+   (INSTANCE fChipSel_obuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (2.496:2.537:2.578))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "OBUF")
+   (INSTANCE fMosi_obuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (2.496:2.537:2.578))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "OBUF")
+   (INSTANCE fMclk_obuf)
+    (DELAY
+     (ABSOLUTE
+      (IOPATH I O (2.496:2.537:2.578))
+     )
+    )
+  )
+  (CELL
+   (CELLTYPE "nano4k_spi_flash_top")
+   (INSTANCE )
+    (DELAY
+     (ABSOLUTE
+       (INTERCONNECT crystalClk_ibuf/O divide_by_eight\/clkdiv_inst/HCLKIN (0.927:1.240:1.554))
+       (INTERCONNECT crystalClk_ibuf/O dut\/fMclk_d_s/I2 (0.942:1.228:1.513))
+       (INTERCONNECT crystalClk_ibuf/O dut\/deserializerBuffer_1_s0/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/deserializerBuffer_0_s0/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/deserializerCycleCount_3_s0/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/deserializerCycleCount_2_s0/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/deserializerCycleCount_1_s0/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/deserializerCycleCount_0_s0/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/RdDataValid_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/serMclkEnable_n_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/mosiOut_7_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/mosiOut_6_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/mosiOut_5_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/mosiOut_4_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/mosiOut_3_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/mosiOut_2_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/mosiOut_1_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/MOSI_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/serializerCycleCount_3_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/serializerCycleCount_2_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/serializerCycleCount_1_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/serializerCycleCount_0_s1/CLK (0.716:0.998:1.280))
+       (INTERCONNECT crystalClk_ibuf/O dut\/WrDataReady_s3/CLK (0.716:0.998:1.280))
+       (INTERCONNECT reset_ibuf/O n341_s0/I0 (1.327:1.873:2.419))
+       (INTERCONNECT reset_ibuf/O n157_s2/I (0.000:0.000:0.000))
+       (INTERCONNECT reset_ibuf/O divide_by_eight\/clkdiv_inst/RESETN (1.732:2.496:3.259))
+       (INTERCONNECT fMiso_ibuf/O dut\/fData_RD_0_s0/D (0.918:1.231:1.543))
+       (INTERCONNECT fMiso_ibuf/O dut\/deserializerBuffer_0_s0/D (0.866:1.211:1.555))
+       (INTERCONNECT n341_s0/F readBuff_2_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT n341_s0/F readBuff_1_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT n341_s0/F readBuff_0_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT n112_s0/F n114_s5/I1 (0.002:0.005:0.008))
+       (INTERCONNECT n112_s0/F flashCmd_1_s1/D (0.462:0.590:0.717))
+       (INTERCONNECT n140_s0/F flashAddr_7_s0/CE (0.814:1.064:1.314))
+       (INTERCONNECT n114_s5/F flashCmd_7_s1/CE (0.621:0.792:0.963))
+       (INTERCONNECT n114_s5/F flashCmd_6_s1/CE (0.373:0.495:0.616))
+       (INTERCONNECT n114_s5/F flashCmd_1_s1/CE (0.178:0.218:0.257))
+       (INTERCONNECT n114_s5/F flashCmd_0_s1/CE (0.178:0.218:0.257))
+       (INTERCONNECT i_enable_n_s4/F i_enable_n_s2/CE (0.175:0.212:0.249))
+       (INTERCONNECT n63_s1/F n112_s0/I0 (0.004:0.008:0.012))
+       (INTERCONNECT n63_s1/F n62_s3/I1 (0.179:0.246:0.313))
+       (INTERCONNECT n63_s1/F n63_s8/I0 (0.199:0.285:0.371))
+       (INTERCONNECT n63_s2/F n112_s0/I3 (0.430:0.518:0.607))
+       (INTERCONNECT n63_s2/F n140_s0/I2 (0.597:0.846:1.095))
+       (INTERCONNECT n63_s2/F i_enable_n_s6/I2 (0.578:0.782:0.985))
+       (INTERCONNECT n63_s2/F n139_s12/I0 (0.430:0.518:0.607))
+       (INTERCONNECT n63_s2/F n135_s2/I1 (0.430:0.518:0.607))
+       (INTERCONNECT n63_s2/F n68_s4/I0 (0.399:0.566:0.733))
+       (INTERCONNECT n63_s2/F n62_s3/I2 (0.578:0.782:0.985))
+       (INTERCONNECT n63_s2/F n63_s8/I1 (0.597:0.846:1.095))
+       (INTERCONNECT n68_s1/F i_enable_n_s6/I0 (0.001:0.003:0.004))
+       (INTERCONNECT n112_s1/F n112_s0/I1 (0.396:0.563:0.730))
+       (INTERCONNECT n112_s1/F n140_s0/I1 (0.591:0.840:1.089))
+       (INTERCONNECT n112_s1/F n139_s12/I1 (0.427:0.515:0.603))
+       (INTERCONNECT n112_s1/F n135_s2/I2 (0.427:0.515:0.603))
+       (INTERCONNECT n112_s2/F n112_s0/I2 (0.425:0.515:0.604))
+       (INTERCONNECT n112_s2/F n140_s0/I0 (0.409:0.630:0.852))
+       (INTERCONNECT n112_s2/F i_enable_n_s6/I1 (0.621:0.792:0.963))
+       (INTERCONNECT i_enable_n_s5/F i_enable_n_s4/I0 (0.602:0.725:0.848))
+       (INTERCONNECT i_enable_n_s5/F n139_s12/I2 (0.602:0.725:0.848))
+       (INTERCONNECT i_enable_n_s6/F i_enable_n_s4/I1 (0.177:0.245:0.313))
+       (INTERCONNECT i_enable_n_s6/F n139_s12/I3 (0.177:0.245:0.313))
+       (INTERCONNECT i_enable_n_s7/F i_enable_n_s4/I2 (0.197:0.280:0.363))
+       (INTERCONNECT n63_s3/F n63_s1/I1 (0.398:0.563:0.729))
+       (INTERCONNECT n63_s3/F n68_s1/I0 (0.596:0.844:1.091))
+       (INTERCONNECT n63_s3/F i_enable_n_s10/I2 (0.398:0.563:0.729))
+       (INTERCONNECT n63_s3/F n68_s4/I1 (0.596:0.844:1.091))
+       (INTERCONNECT n63_s4/F n63_s1/I2 (0.177:0.245:0.313))
+       (INTERCONNECT n63_s4/F i_enable_n_s10/I3 (0.177:0.245:0.313))
+       (INTERCONNECT n63_s5/F n63_s1/I3 (0.172:0.241:0.310))
+       (INTERCONNECT n63_s6/F n63_s2/I2 (0.172:0.241:0.310))
+       (INTERCONNECT n63_s7/F n63_s2/I3 (0.001:0.003:0.004))
+       (INTERCONNECT n68_s2/F n68_s1/I1 (0.376:0.496:0.616))
+       (INTERCONNECT n68_s2/F n68_s4/I2 (0.376:0.496:0.616))
+       (INTERCONNECT n68_s3/F n68_s1/I2 (0.002:0.005:0.008))
+       (INTERCONNECT n68_s3/F n68_s4/I3 (0.002:0.005:0.008))
+       (INTERCONNECT n112_s3/F n112_s1/I1 (0.427:0.517:0.608))
+       (INTERCONNECT n112_s3/F n112_s2/I1 (0.427:0.517:0.608))
+       (INTERCONNECT n112_s3/F i_enable_n_s5/I2 (0.424:0.514:0.604))
+       (INTERCONNECT n112_s4/F n112_s1/I2 (0.177:0.245:0.313))
+       (INTERCONNECT n112_s4/F i_enable_n_s8/I0 (0.177:0.245:0.313))
+       (INTERCONNECT n112_s5/F n112_s1/I3 (0.001:0.003:0.004))
+       (INTERCONNECT n112_s6/F n112_s2/I2 (0.177:0.245:0.313))
+       (INTERCONNECT n112_s6/F i_enable_n_s8/I2 (0.177:0.245:0.313))
+       (INTERCONNECT n112_s7/F n112_s2/I3 (0.001:0.003:0.004))
+       (INTERCONNECT i_enable_n_s8/F i_enable_n_s5/I0 (0.001:0.003:0.004))
+       (INTERCONNECT i_enable_n_s9/F i_enable_n_s5/I1 (0.001:0.003:0.004))
+       (INTERCONNECT i_enable_n_s10/F i_enable_n_s5/I3 (0.423:0.509:0.596))
+       (INTERCONNECT i_enable_n_s12/F i_enable_n_s7/I0 (0.001:0.003:0.004))
+       (INTERCONNECT n139_s12/F i_enable_n_s2/D (0.000:0.000:0.000))
+       (INTERCONNECT n135_s2/F flashCmd_0_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT i_enable_n_s13/F i_enable_n_s6/I3 (0.001:0.003:0.004))
+       (INTERCONNECT n68_s4/F n114_s5/I0 (0.181:0.248:0.315))
+       (INTERCONNECT n68_s4/F n135_s2/I0 (0.181:0.248:0.315))
+       (INTERCONNECT n68_s4/F flashCmd_7_s1/D (0.462:0.590:0.717))
+       (INTERCONNECT n62_s3/F wr_data_0_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT n63_s8/F wr_data_7_s0/CE (0.816:1.069:1.322))
+       (INTERCONNECT n63_s8/F wr_data_6_s0/CE (0.816:1.069:1.322))
+       (INTERCONNECT n63_s8/F wr_data_5_s0/CE (0.626:0.798:0.970))
+       (INTERCONNECT n63_s8/F wr_data_4_s0/CE (0.626:0.798:0.970))
+       (INTERCONNECT n63_s8/F wr_data_3_s0/CE (0.626:0.798:0.970))
+       (INTERCONNECT n63_s8/F wr_data_2_s0/CE (0.626:0.798:0.970))
+       (INTERCONNECT n63_s8/F wr_data_1_s0/CE (0.626:0.798:0.970))
+       (INTERCONNECT n63_s8/F flashCmd_6_s1/D (0.463:0.592:0.721))
+       (INTERCONNECT readStrobeIndicator_s3/Q readStrobeIndicator_obuf/I (1.021:1.594:2.167))
+       (INTERCONNECT readStrobeIndicator_s3/Q n44_s2/I0 (0.002:0.004:0.006))
+       (INTERCONNECT i_enable_n_s2/Q dut\/n589_s0/I0 (0.627:0.988:1.350))
+       (INTERCONNECT i_enable_n_s2/Q dut\/serializerByteBuffer_7_s5/I0 (0.417:0.643:0.869))
+       (INTERCONNECT i_enable_n_s2/Q dut\/currentAddr_23_s5/I2 (0.449:0.600:0.751))
+       (INTERCONNECT i_enable_n_s2/Q dut\/n581_s2/I1 (0.420:0.646:0.872))
+       (INTERCONNECT i_enable_n_s2/Q dut\/addrCycleCount_1_s0/RESET (0.645:0.877:1.110))
+       (INTERCONNECT i_enable_n_s2/Q dut\/dmmyCycleCount_2_s0/RESET (0.420:0.646:0.872))
+       (INTERCONNECT i_enable_n_s2/Q dut\/dmmyCycleCount_1_s0/RESET (0.420:0.646:0.872))
+       (INTERCONNECT i_enable_n_s2/Q dut\/deserializerEnable_s0/RESET (0.811:1.201:1.590))
+       (INTERCONNECT i_enable_n_s2/Q dut\/CS_n_s0/D (0.828:1.320:1.813))
+       (INTERCONNECT i_enable_n_s2/Q dut\/flashState_0_s2/RESET (0.420:0.646:0.872))
+       (INTERCONNECT i_enable_n_s2/Q dut\/serializerEnable_s2/RESET (0.583:0.839:1.096))
+       (INTERCONNECT i_enable_n_s2/Q dut\/addrCycleCount_0_s1/RESET (0.633:0.856:1.079))
+       (INTERCONNECT i_enable_n_s2/Q dut\/dmmyCycleCount_0_s1/RESET (0.633:0.856:1.079))
+       (INTERCONNECT i_enable_n_s2/Q dut\/flashState_2_s3/RESET (0.615:0.923:1.231))
+       (INTERCONNECT i_enable_n_s2/Q dut\/flashState_1_s3/RESET (0.615:0.923:1.231))
+       (INTERCONNECT n28_s/SUM testStateCounter_1_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n28_s/COUT n27_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n27_s/SUM testStateCounter_2_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n27_s/COUT n26_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n26_s/SUM testStateCounter_3_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n26_s/COUT n25_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n25_s/SUM testStateCounter_4_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n25_s/COUT n24_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n24_s/SUM testStateCounter_5_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n24_s/COUT n23_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n23_s/SUM testStateCounter_6_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n23_s/COUT n22_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n22_s/SUM testStateCounter_7_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n22_s/COUT n21_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n21_s/SUM testStateCounter_8_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n21_s/COUT n20_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n20_s/SUM testStateCounter_9_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n20_s/COUT n19_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n19_s/SUM testStateCounter_10_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n19_s/COUT n18_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n18_s/SUM testStateCounter_11_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n18_s/COUT n17_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n17_s/SUM testStateCounter_12_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n17_s/COUT n16_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n16_s/SUM testStateCounter_13_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n16_s/COUT n15_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n15_s/SUM testStateCounter_14_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n15_s/COUT n14_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n14_s/SUM testStateCounter_15_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n14_s/COUT n13_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n13_s/SUM testStateCounter_16_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n13_s/COUT n12_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n12_s/SUM testStateCounter_17_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n12_s/COUT n11_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n11_s/SUM testStateCounter_18_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n11_s/COUT n10_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n10_s/SUM testStateCounter_19_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n10_s/COUT n9_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n9_s/SUM testStateCounter_20_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n9_s/COUT n8_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n8_s/SUM testStateCounter_21_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n61_s/SUM wr_data_1_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n61_s/COUT n60_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n60_s/SUM wr_data_2_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n60_s/COUT n59_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n59_s/SUM wr_data_3_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n59_s/COUT n58_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n58_s/SUM wr_data_4_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n58_s/COUT n57_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n57_s/SUM wr_data_5_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n57_s/COUT n56_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n56_s/SUM wr_data_6_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n56_s/COUT n55_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT n55_s/SUM wr_data_7_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT n157_s2/O testStateCounter_20_s0/RESET (1.506:2.089:2.671))
+       (INTERCONNECT n157_s2/O testStateCounter_19_s0/RESET (1.506:2.089:2.671))
+       (INTERCONNECT n157_s2/O testStateCounter_18_s0/RESET (1.506:2.089:2.671))
+       (INTERCONNECT n157_s2/O testStateCounter_17_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_16_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_15_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_14_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_13_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_12_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_11_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_10_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_9_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_8_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_7_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_6_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_5_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_4_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_3_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_2_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_1_s0/RESET (1.315:1.817:2.319))
+       (INTERCONNECT n157_s2/O testStateCounter_0_s0/RESET (1.306:1.805:2.305))
+       (INTERCONNECT n157_s2/O wr_data_7_s0/RESET (0.924:1.258:1.593))
+       (INTERCONNECT n157_s2/O wr_data_6_s0/RESET (0.924:1.258:1.593))
+       (INTERCONNECT n157_s2/O wr_data_5_s0/RESET (0.924:1.258:1.593))
+       (INTERCONNECT n157_s2/O wr_data_4_s0/RESET (0.924:1.258:1.593))
+       (INTERCONNECT n157_s2/O wr_data_3_s0/RESET (0.924:1.258:1.593))
+       (INTERCONNECT n157_s2/O wr_data_2_s0/RESET (0.924:1.258:1.593))
+       (INTERCONNECT n157_s2/O wr_data_1_s0/RESET (0.924:1.258:1.593))
+       (INTERCONNECT n157_s2/O flashAddr_7_s0/RESET (0.924:1.258:1.593))
+       (INTERCONNECT n157_s2/O testStateCounter_21_s0/RESET (1.506:2.089:2.671))
+       (INTERCONNECT n157_s2/O flashCmd_7_s1/RESET (0.919:1.252:1.585))
+       (INTERCONNECT n157_s2/O flashCmd_6_s1/RESET (0.924:1.258:1.593))
+       (INTERCONNECT n157_s2/O flashCmd_1_s1/RESET (1.311:1.811:2.312))
+       (INTERCONNECT n157_s2/O flashCmd_0_s1/RESET (1.311:1.811:2.312))
+       (INTERCONNECT n157_s2/O readStrobeIndicator_s3/RESET (0.914:1.246:1.578))
+       (INTERCONNECT n157_s2/O i_enable_n_s2/SET (1.311:1.811:2.312))
+       (INTERCONNECT n157_s2/O wr_data_0_s1/RESET (0.919:1.252:1.585))
+       (INTERCONNECT n44_s2/F readStrobeIndicator_s3/D (0.000:0.000:0.000))
+       (INTERCONNECT n29_s2/F testStateCounter_0_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_20_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_19_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_18_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_17_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_16_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_15_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_14_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_13_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_12_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_11_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_10_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_9_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_8_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_7_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_6_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_5_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_4_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_3_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_2_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_1_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_0_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT readBuff_2_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT readBuff_1_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT readBuff_0_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT wr_data_7_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT wr_data_6_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT wr_data_5_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT wr_data_4_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT wr_data_3_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT wr_data_2_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT wr_data_1_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT flashAddr_7_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT testStateCounter_21_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT flashCmd_7_s1/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT flashCmd_6_s1/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT flashCmd_1_s1/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT flashCmd_0_s1/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT readStrobeIndicator_s3/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT i_enable_n_s2/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT wr_data_0_s1/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/currentCmd_3_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/currentCmd_2_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/currentCmd_1_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/currentCmd_0_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/currentAddr_23_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/currentAddr_15_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/currentAddr_7_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/serializerByteBuffer_7_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/serializerByteBuffer_6_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/serializerByteBuffer_5_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/serializerByteBuffer_4_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/serializerByteBuffer_3_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/serializerByteBuffer_2_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/serializerByteBuffer_1_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/serializerByteBuffer_0_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/addrCycleCount_1_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/dmmyCycleCount_2_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/dmmyCycleCount_1_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/deserializerEnable_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/fData_RD_2_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/fData_RD_1_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/fData_RD_0_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/CS_n_s0/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/flashState_0_s2/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/serializerEnable_s2/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/addrCycleCount_0_s1/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/dmmyCycleCount_0_s1/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/flashState_2_s3/CLK (0.136:0.163:0.190))
+       (INTERCONNECT divide_by_eight\/clkdiv_inst/CLKOUT dut\/flashState_1_s3/CLK (0.136:0.163:0.190))
+       (INTERCONNECT dut\/CS_n_s0/Q fChipSel_obuf/I (0.828:1.320:1.813))
+       (INTERCONNECT dut\/RdDataValid_s1/Q n341_s0/I1 (0.843:1.201:1.560))
+       (INTERCONNECT dut\/RdDataValid_s1/Q i_enable_n_s7/I2 (0.663:0.814:0.966))
+       (INTERCONNECT dut\/RdDataValid_s1/Q readStrobeIndicator_s3/CE (0.832:1.141:1.451))
+       (INTERCONNECT dut\/RdDataValid_s1/Q dut\/n589_s0/I1 (0.620:0.793:0.965))
+       (INTERCONNECT dut\/MOSI_s1/Q fMosi_obuf/I (0.790:1.180:1.570))
+       (INTERCONNECT dut\/WrDataReady_s3/Q i_enable_n_s7/I1 (0.439:0.583:0.726))
+       (INTERCONNECT dut\/WrDataReady_s3/Q dut\/serializerByteBuffer_7_s6/I0 (0.179:0.246:0.314))
+       (INTERCONNECT dut\/WrDataReady_s3/Q dut\/n196_s13/I0 (0.199:0.285:0.371))
+       (INTERCONNECT dut\/WrDataReady_s3/Q dut\/n214_s15/I0 (0.623:0.795:0.967))
+       (INTERCONNECT dut\/WrDataReady_s3/Q dut\/n198_s15/I1 (0.428:0.518:0.607))
+       (INTERCONNECT dut\/fMclk_d_s/F fMclk_obuf/I (0.406:0.625:0.844))
+       (INTERCONNECT ledOut_d_0_s/F ledOut_0_obuf/I (0.790:1.180:1.570))
+       (INTERCONNECT testStateCounter_0_s0/Q n63_s5/I0 (0.414:0.637:0.859))
+       (INTERCONNECT testStateCounter_0_s0/Q n68_s3/I0 (0.414:0.637:0.859))
+       (INTERCONNECT testStateCounter_0_s0/Q n112_s4/I0 (0.428:0.518:0.607))
+       (INTERCONNECT testStateCounter_0_s0/Q n112_s7/I0 (0.623:0.795:0.967))
+       (INTERCONNECT testStateCounter_0_s0/Q i_enable_n_s13/I1 (0.414:0.637:0.859))
+       (INTERCONNECT testStateCounter_0_s0/Q n28_s/I1 (0.394:0.562:0.730))
+       (INTERCONNECT testStateCounter_0_s0/Q n29_s2/I0 (0.003:0.008:0.012))
+       (INTERCONNECT testStateCounter_1_s0/Q n63_s5/I1 (0.379:0.501:0.623))
+       (INTERCONNECT testStateCounter_1_s0/Q n68_s3/I3 (0.204:0.291:0.378))
+       (INTERCONNECT testStateCounter_1_s0/Q n112_s4/I2 (0.184:0.250:0.317))
+       (INTERCONNECT testStateCounter_1_s0/Q n112_s7/I1 (0.426:0.519:0.612))
+       (INTERCONNECT testStateCounter_1_s0/Q i_enable_n_s8/I1 (0.425:0.515:0.604))
+       (INTERCONNECT testStateCounter_1_s0/Q i_enable_n_s10/I0 (0.199:0.285:0.371))
+       (INTERCONNECT testStateCounter_1_s0/Q i_enable_n_s13/I2 (0.204:0.291:0.378))
+       (INTERCONNECT testStateCounter_1_s0/Q n28_s/I0 (0.003:0.008:0.012))
+       (INTERCONNECT testStateCounter_2_s0/Q n63_s4/I0 (0.201:0.286:0.372))
+       (INTERCONNECT testStateCounter_2_s0/Q n68_s2/I0 (0.201:0.286:0.372))
+       (INTERCONNECT testStateCounter_2_s0/Q n112_s5/I0 (0.424:0.513:0.601))
+       (INTERCONNECT testStateCounter_2_s0/Q n112_s6/I2 (0.204:0.289:0.375))
+       (INTERCONNECT testStateCounter_2_s0/Q n27_s/I1 (0.003:0.006:0.009))
+       (INTERCONNECT testStateCounter_3_s0/Q n63_s5/I2 (0.382:0.507:0.631))
+       (INTERCONNECT testStateCounter_3_s0/Q n68_s3/I2 (0.382:0.507:0.631))
+       (INTERCONNECT testStateCounter_3_s0/Q n112_s4/I1 (0.397:0.565:0.734))
+       (INTERCONNECT testStateCounter_3_s0/Q n112_s6/I1 (0.202:0.288:0.375))
+       (INTERCONNECT testStateCounter_3_s0/Q i_enable_n_s10/I1 (0.621:0.792:0.963))
+       (INTERCONNECT testStateCounter_3_s0/Q i_enable_n_s13/I3 (0.382:0.507:0.631))
+       (INTERCONNECT testStateCounter_3_s0/Q n26_s/I1 (0.178:0.218:0.257))
+       (INTERCONNECT testStateCounter_4_s0/Q n63_s4/I1 (0.176:0.244:0.312))
+       (INTERCONNECT testStateCounter_4_s0/Q n68_s3/I1 (0.424:0.513:0.601))
+       (INTERCONNECT testStateCounter_4_s0/Q n112_s4/I3 (0.181:0.248:0.315))
+       (INTERCONNECT testStateCounter_4_s0/Q n112_s6/I0 (0.176:0.244:0.312))
+       (INTERCONNECT testStateCounter_4_s0/Q n25_s/I1 (0.177:0.216:0.254))
+       (INTERCONNECT testStateCounter_5_s0/Q n63_s4/I2 (0.181:0.248:0.315))
+       (INTERCONNECT testStateCounter_5_s0/Q n68_s2/I1 (0.181:0.248:0.315))
+       (INTERCONNECT testStateCounter_5_s0/Q n112_s5/I2 (0.430:0.519:0.608))
+       (INTERCONNECT testStateCounter_5_s0/Q n112_s7/I3 (0.430:0.519:0.608))
+       (INTERCONNECT testStateCounter_5_s0/Q i_enable_n_s9/I1 (0.430:0.519:0.608))
+       (INTERCONNECT testStateCounter_5_s0/Q n24_s/I1 (0.176:0.244:0.312))
+       (INTERCONNECT testStateCounter_6_s0/Q n63_s4/I3 (0.622:0.797:0.972))
+       (INTERCONNECT testStateCounter_6_s0/Q n68_s2/I2 (0.179:0.246:0.314))
+       (INTERCONNECT testStateCounter_6_s0/Q n112_s5/I1 (0.425:0.515:0.604))
+       (INTERCONNECT testStateCounter_6_s0/Q n112_s7/I2 (0.184:0.250:0.317))
+       (INTERCONNECT testStateCounter_6_s0/Q i_enable_n_s9/I0 (0.184:0.250:0.317))
+       (INTERCONNECT testStateCounter_6_s0/Q n23_s/I1 (0.003:0.008:0.012))
+       (INTERCONNECT testStateCounter_7_s0/Q n63_s1/I0 (0.199:0.285:0.371))
+       (INTERCONNECT testStateCounter_7_s0/Q n112_s1/I0 (0.184:0.250:0.317))
+       (INTERCONNECT testStateCounter_7_s0/Q n112_s2/I0 (0.184:0.250:0.317))
+       (INTERCONNECT testStateCounter_7_s0/Q n68_s2/I3 (0.179:0.246:0.314))
+       (INTERCONNECT testStateCounter_7_s0/Q i_enable_n_s13/I0 (0.426:0.519:0.612))
+       (INTERCONNECT testStateCounter_7_s0/Q n22_s/I1 (0.179:0.246:0.314))
+       (INTERCONNECT testStateCounter_8_s0/Q n63_s3/I0 (0.200:0.284:0.369))
+       (INTERCONNECT testStateCounter_8_s0/Q n112_s3/I3 (0.200:0.284:0.369))
+       (INTERCONNECT testStateCounter_8_s0/Q n21_s/I1 (0.002:0.004:0.006))
+       (INTERCONNECT testStateCounter_9_s0/Q n63_s3/I1 (0.200:0.284:0.369))
+       (INTERCONNECT testStateCounter_9_s0/Q n112_s3/I0 (0.200:0.284:0.369))
+       (INTERCONNECT testStateCounter_9_s0/Q n20_s/I1 (0.176:0.214:0.251))
+       (INTERCONNECT testStateCounter_10_s0/Q n63_s3/I2 (0.200:0.284:0.369))
+       (INTERCONNECT testStateCounter_10_s0/Q n112_s3/I1 (0.200:0.284:0.369))
+       (INTERCONNECT testStateCounter_10_s0/Q n19_s/I1 (0.176:0.214:0.251))
+       (INTERCONNECT testStateCounter_11_s0/Q n63_s3/I3 (0.200:0.284:0.369))
+       (INTERCONNECT testStateCounter_11_s0/Q n112_s3/I2 (0.200:0.284:0.369))
+       (INTERCONNECT testStateCounter_11_s0/Q n18_s/I1 (0.176:0.214:0.251))
+       (INTERCONNECT testStateCounter_12_s0/Q n63_s2/I0 (0.174:0.243:0.311))
+       (INTERCONNECT testStateCounter_12_s0/Q n17_s/I1 (0.002:0.004:0.006))
+       (INTERCONNECT testStateCounter_13_s0/Q n63_s2/I1 (0.174:0.243:0.311))
+       (INTERCONNECT testStateCounter_13_s0/Q n16_s/I1 (0.424:0.511:0.598))
+       (INTERCONNECT testStateCounter_14_s0/Q n63_s7/I0 (0.176:0.214:0.251))
+       (INTERCONNECT testStateCounter_14_s0/Q n15_s/I1 (0.002:0.004:0.006))
+       (INTERCONNECT testStateCounter_15_s0/Q n63_s7/I1 (0.180:0.218:0.255))
+       (INTERCONNECT testStateCounter_15_s0/Q n14_s/I1 (0.180:0.218:0.255))
+       (INTERCONNECT testStateCounter_16_s0/Q n63_s7/I2 (0.180:0.218:0.255))
+       (INTERCONNECT testStateCounter_16_s0/Q n13_s/I1 (0.180:0.218:0.255))
+       (INTERCONNECT testStateCounter_17_s0/Q n63_s7/I3 (0.180:0.218:0.255))
+       (INTERCONNECT testStateCounter_17_s0/Q n12_s/I1 (0.180:0.218:0.255))
+       (INTERCONNECT testStateCounter_18_s0/Q n63_s6/I0 (0.176:0.214:0.251))
+       (INTERCONNECT testStateCounter_18_s0/Q n11_s/I1 (0.002:0.004:0.006))
+       (INTERCONNECT testStateCounter_19_s0/Q n63_s6/I1 (0.174:0.243:0.311))
+       (INTERCONNECT testStateCounter_19_s0/Q n10_s/I1 (0.174:0.243:0.311))
+       (INTERCONNECT testStateCounter_20_s0/Q n63_s6/I2 (0.176:0.214:0.251))
+       (INTERCONNECT testStateCounter_20_s0/Q n9_s/I1 (0.002:0.004:0.006))
+       (INTERCONNECT testStateCounter_21_s0/Q n63_s6/I3 (0.176:0.214:0.251))
+       (INTERCONNECT testStateCounter_21_s0/Q n8_s/I1 (0.176:0.214:0.251))
+       (INTERCONNECT readBuff_0_s0/Q ledOut_d_0_s/I0 (0.175:0.212:0.249))
+       (INTERCONNECT readBuff_1_s0/Q ledOut_d_0_s/I1 (0.175:0.212:0.249))
+       (INTERCONNECT readBuff_2_s0/Q ledOut_d_0_s/I2 (0.175:0.212:0.249))
+       (INTERCONNECT wr_data_0_s1/Q n62_s3/I0 (0.002:0.004:0.006))
+       (INTERCONNECT wr_data_0_s1/Q n61_s/I1 (0.200:0.284:0.369))
+       (INTERCONNECT wr_data_0_s1/Q dut\/n216_s13/I1 (0.591:0.839:1.087))
+       (INTERCONNECT wr_data_1_s0/Q n61_s/I0 (0.002:0.004:0.006))
+       (INTERCONNECT wr_data_1_s0/Q dut\/n214_s13/I1 (0.174:0.243:0.311))
+       (INTERCONNECT wr_data_2_s0/Q n60_s/I1 (0.002:0.004:0.006))
+       (INTERCONNECT wr_data_2_s0/Q dut\/n212_s14/I1 (0.197:0.281:0.365))
+       (INTERCONNECT wr_data_3_s0/Q n59_s/I1 (0.176:0.214:0.251))
+       (INTERCONNECT wr_data_3_s0/Q dut\/n210_s14/I1 (0.424:0.511:0.598))
+       (INTERCONNECT wr_data_4_s0/Q n58_s/I1 (0.176:0.214:0.251))
+       (INTERCONNECT wr_data_4_s0/Q dut\/n208_s14/I1 (0.174:0.243:0.311))
+       (INTERCONNECT wr_data_5_s0/Q n57_s/I1 (0.174:0.243:0.311))
+       (INTERCONNECT wr_data_5_s0/Q dut\/n206_s12/I1 (0.598:0.720:0.843))
+       (INTERCONNECT wr_data_6_s0/Q n56_s/I1 (0.002:0.004:0.006))
+       (INTERCONNECT wr_data_6_s0/Q dut\/n204_s14/I1 (0.424:0.511:0.598))
+       (INTERCONNECT wr_data_7_s0/Q n55_s/I1 (0.176:0.214:0.251))
+       (INTERCONNECT wr_data_7_s0/Q dut\/n202_s12/I1 (0.393:0.558:0.724))
+       (INTERCONNECT flashAddr_7_s0/Q dut\/n176_s13/I1 (0.437:0.577:0.717))
+       (INTERCONNECT flashCmd_0_s1/Q i_enable_n_s12/I0 (0.197:0.281:0.365))
+       (INTERCONNECT flashCmd_0_s1/Q dut\/currentCmd_0_s0/D (0.692:1.001:1.310))
+       (INTERCONNECT flashCmd_1_s1/Q i_enable_n_s12/I3 (0.197:0.281:0.365))
+       (INTERCONNECT flashCmd_1_s1/Q dut\/currentCmd_1_s0/D (0.918:1.231:1.543))
+       (INTERCONNECT flashCmd_6_s1/Q i_enable_n_s12/I2 (0.176:0.214:0.251))
+       (INTERCONNECT flashCmd_6_s1/Q dut\/currentCmd_2_s0/D (0.873:1.210:1.547))
+       (INTERCONNECT flashCmd_7_s1/Q i_enable_n_s12/I1 (0.174:0.243:0.311))
+       (INTERCONNECT flashCmd_7_s1/Q dut\/currentCmd_3_s0/D (0.723:0.953:1.184))
+       (INTERCONNECT dut\/fData_RD_0_s0/Q readBuff_0_s0/D (1.158:1.526:1.895))
+       (INTERCONNECT dut\/fData_RD_1_s0/Q readBuff_1_s0/D (1.158:1.526:1.895))
+       (INTERCONNECT dut\/fData_RD_2_s0/Q readBuff_2_s0/D (0.932:1.297:1.662))
+       (INTERCONNECT VCC_cZ/V flashAddr_7_s0/D (0.460:0.585:0.711))
+       (INTERCONNECT VCC_cZ/V GSR/GSRI (0.195:0.277:0.359))
+       (INTERCONNECT VCC_cZ/V dut\/deserializerEnable_s0/D (0.460:0.585:0.711))
+       (INTERCONNECT GND_cZ/G ledOut_1_obuf/I (0.195:0.277:0.359))
+       (INTERCONNECT GND_cZ/G ledOut_2_obuf/I (0.195:0.277:0.359))
+       (INTERCONNECT GND_cZ/G n28_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n28_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n27_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n27_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n26_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n26_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n25_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n25_s/I3 (0.011:0.024:0.037))
+       (INTERCONNECT GND_cZ/G n24_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n24_s/I3 (0.172:0.241:0.310))
+       (INTERCONNECT GND_cZ/G n23_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n23_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n22_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n22_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n21_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n21_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n20_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n20_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n19_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n19_s/I3 (0.007:0.016:0.024))
+       (INTERCONNECT GND_cZ/G n18_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n18_s/I3 (0.206:0.301:0.396))
+       (INTERCONNECT GND_cZ/G n17_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n17_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n16_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n16_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n15_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n15_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n14_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n14_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n13_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n13_s/I3 (0.011:0.024:0.037))
+       (INTERCONNECT GND_cZ/G n12_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n12_s/I3 (0.206:0.301:0.396))
+       (INTERCONNECT GND_cZ/G n11_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n11_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n10_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n10_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n9_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n9_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n8_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n8_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n61_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n61_s/CIN (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n60_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n60_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n59_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n59_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n58_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n58_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n57_s/I0 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n57_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n56_s/I0 (0.008:0.018:0.028))
+       (INTERCONNECT GND_cZ/G n56_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G n55_s/I0 (0.188:0.228:0.267))
+       (INTERCONNECT GND_cZ/G n55_s/I3 (0.000:0.000:0.000))
+       (INTERCONNECT GND_cZ/G divide_by_eight\/clkdiv_inst/CALIB (0.195:0.277:0.359))
+       (INTERCONNECT GND_cZ/G dut\/serMclkEnable_n_s1/D (0.481:0.652:0.823))
+       (INTERCONNECT dut\/n610_s0/F dut\/deserializerCycleCount_3_s0/RESET (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n610_s0/F dut\/deserializerCycleCount_2_s0/RESET (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n610_s0/F dut\/deserializerCycleCount_1_s0/RESET (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n610_s0/F dut\/deserializerCycleCount_0_s0/RESET (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n604_s0/F dut\/serializerCycleCount_3_s1/RESET (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n604_s0/F dut\/serializerCycleCount_2_s1/RESET (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n604_s0/F dut\/serializerCycleCount_1_s1/RESET (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n604_s0/F dut\/serializerCycleCount_0_s1/RESET (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n572_s0/F dut\/n589_s0/I2 (0.394:0.562:0.730))
+       (INTERCONNECT dut\/n572_s0/F dut\/serializerByteBuffer_7_s5/I1 (0.004:0.008:0.012))
+       (INTERCONNECT dut\/n572_s0/F dut\/deserializerEnable_s0/CE (0.425:0.515:0.604))
+       (INTERCONNECT dut\/n589_s0/F dut\/fData_RD_2_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n589_s0/F dut\/fData_RD_1_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n589_s0/F dut\/fData_RD_0_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n356_s0/F dut\/n359_s0/I2 (0.398:0.568:0.738))
+       (INTERCONNECT dut\/n356_s0/F dut\/n360_s0/I2 (0.597:0.848:1.100))
+       (INTERCONNECT dut\/n356_s0/F dut\/n361_s0/I2 (0.417:0.642:0.868))
+       (INTERCONNECT dut\/n356_s0/F dut\/n362_s0/I2 (0.417:0.642:0.868))
+       (INTERCONNECT dut\/n356_s0/F dut\/n363_s0/I2 (0.417:0.642:0.868))
+       (INTERCONNECT dut\/n356_s0/F dut\/n364_s0/I2 (0.444:0.593:0.743))
+       (INTERCONNECT dut\/n356_s0/F dut\/n366_s0/I2 (0.401:0.571:0.741))
+       (INTERCONNECT dut\/n356_s0/F dut\/WrDataReady_s4/I1 (0.182:0.248:0.315))
+       (INTERCONNECT dut\/n356_s0/F dut\/n365_s1/I1 (0.444:0.593:0.743))
+       (INTERCONNECT dut\/n356_s0/F dut\/serMclkEnable_n_s1/CE (0.374:0.497:0.620))
+       (INTERCONNECT dut\/n359_s0/F dut\/mosiOut_7_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n360_s0/F dut\/mosiOut_6_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n361_s0/F dut\/mosiOut_5_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n362_s0/F dut\/mosiOut_4_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n363_s0/F dut\/mosiOut_3_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n364_s0/F dut\/mosiOut_2_s1/D (0.708:0.884:1.060))
+       (INTERCONNECT dut\/n366_s0/F dut\/MOSI_s1/D (0.790:1.180:1.570))
+       (INTERCONNECT dut\/n370_s0/F dut\/n604_s0/I0 (0.002:0.005:0.008))
+       (INTERCONNECT dut\/n370_s0/F dut\/WrDataReady_s4/I0 (0.181:0.248:0.315))
+       (INTERCONNECT dut\/n370_s0/F dut\/WrDataReady_s3/D (0.456:0.617:0.778))
+       (INTERCONNECT dut\/WrDataReady_s4/F dut\/WrDataReady_s3/CE (0.814:1.064:1.314))
+       (INTERCONNECT dut\/RdDataValid_s3/F dut\/RdDataValid_s1/CE (0.423:0.509:0.596))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s5/F dut\/serializerByteBuffer_7_s0/CE (0.399:0.566:0.733))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s5/F dut\/serializerByteBuffer_6_s0/CE (0.594:0.843:1.092))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s5/F dut\/serializerByteBuffer_5_s0/CE (0.399:0.566:0.733))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s5/F dut\/serializerByteBuffer_4_s0/CE (0.586:0.843:1.101))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s5/F dut\/serializerByteBuffer_3_s0/CE (0.586:0.843:1.101))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s5/F dut\/serializerByteBuffer_2_s0/CE (0.594:0.843:1.092))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s5/F dut\/serializerByteBuffer_1_s0/CE (0.586:0.843:1.101))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s5/F dut\/serializerByteBuffer_0_s0/CE (0.586:0.843:1.101))
+       (INTERCONNECT dut\/n198_s12/F dut\/flashState_0_s2/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n200_s11/F dut\/serializerEnable_s2/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n202_s12/F dut\/serializerByteBuffer_7_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n206_s12/F dut\/serializerByteBuffer_5_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n36_s1/F dut\/addrCycleCount_1_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n365_s1/F dut\/mosiOut_1_s1/D (0.708:0.884:1.060))
+       (INTERCONNECT dut\/n84_s1/F dut\/dmmyCycleCount_1_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n83_s1/F dut\/dmmyCycleCount_2_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/currentAddr_23_s5/F dut\/currentAddr_23_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT dut\/currentAddr_23_s5/F dut\/currentAddr_15_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT dut\/currentAddr_23_s5/F dut\/currentAddr_7_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n214_s13/F dut\/serializerByteBuffer_1_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n216_s13/F dut\/serializerByteBuffer_0_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n374_s0/F dut\/serializerCycleCount_1_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n373_s0/F dut\/serializerCycleCount_2_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n372_s0/F dut\/serializerCycleCount_3_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n424_s0/F dut\/deserializerCycleCount_1_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n423_s0/F dut\/deserializerCycleCount_2_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n422_s0/F dut\/deserializerCycleCount_3_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n610_s1/F dut\/n610_s0/I2 (0.001:0.003:0.004))
+       (INTERCONNECT dut\/n572_s1/F dut\/n572_s0/I2 (0.199:0.285:0.371))
+       (INTERCONNECT dut\/n572_s1/F dut\/n196_s13/I2 (0.624:0.795:0.967))
+       (INTERCONNECT dut\/n572_s1/F dut\/n200_s12/I0 (0.199:0.285:0.371))
+       (INTERCONNECT dut\/n572_s1/F dut\/n194_s17/I3 (0.624:0.795:0.967))
+       (INTERCONNECT dut\/n572_s2/F dut\/n572_s0/I3 (0.004:0.008:0.012))
+       (INTERCONNECT dut\/n572_s2/F dut\/n200_s12/I3 (0.621:0.792:0.963))
+       (INTERCONNECT dut\/n572_s2/F dut\/n200_s13/I1 (0.409:0.630:0.852))
+       (INTERCONNECT dut\/n120_s1/F dut\/n200_s11/I1 (0.001:0.003:0.004))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s6/F dut\/serializerByteBuffer_7_s5/I2 (0.001:0.003:0.004))
+       (INTERCONNECT dut\/n196_s13/F dut\/n196_s15/I3 (0.001:0.003:0.004))
+       (INTERCONNECT dut\/n198_s13/F dut\/n198_s12/I0 (0.002:0.005:0.008))
+       (INTERCONNECT dut\/n198_s13/F dut\/n194_s14/I2 (0.198:0.282:0.367))
+       (INTERCONNECT dut\/n200_s12/F dut\/n200_s11/I2 (0.401:0.571:0.741))
+       (INTERCONNECT dut\/n200_s12/F dut\/n202_s12/I0 (0.005:0.010:0.016))
+       (INTERCONNECT dut\/n200_s12/F dut\/n206_s12/I0 (0.005:0.010:0.016))
+       (INTERCONNECT dut\/n200_s12/F dut\/n214_s13/I0 (0.206:0.294:0.382))
+       (INTERCONNECT dut\/n200_s12/F dut\/n216_s13/I0 (0.389:0.515:0.642))
+       (INTERCONNECT dut\/n200_s12/F dut\/n210_s14/I0 (0.389:0.515:0.642))
+       (INTERCONNECT dut\/n200_s12/F dut\/n208_s14/I0 (0.389:0.515:0.642))
+       (INTERCONNECT dut\/n200_s12/F dut\/n212_s14/I0 (0.187:0.252:0.318))
+       (INTERCONNECT dut\/n200_s12/F dut\/n204_s14/I0 (0.187:0.252:0.318))
+       (INTERCONNECT dut\/n200_s13/F dut\/n200_s11/I3 (0.371:0.490:0.608))
+       (INTERCONNECT dut\/n202_s14/F dut\/n202_s12/I3 (0.001:0.003:0.004))
+       (INTERCONNECT dut\/n206_s13/F dut\/n206_s12/I3 (0.001:0.003:0.004))
+       (INTERCONNECT dut\/n415_s1/F dut\/RdDataValid_s1/D (0.708:0.884:1.060))
+       (INTERCONNECT dut\/n202_s15/F dut\/n202_s12/I2 (0.426:0.513:0.599))
+       (INTERCONNECT dut\/n202_s15/F dut\/n206_s12/I2 (0.426:0.513:0.599))
+       (INTERCONNECT dut\/n194_s14/F dut\/n200_s11/I0 (0.634:0.857:1.081))
+       (INTERCONNECT dut\/n194_s14/F dut\/n194_s17/I2 (0.598:0.722:0.845))
+       (INTERCONNECT dut\/n194_s14/F dut\/n196_s15/I2 (0.424:0.512:0.600))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s9/F dut\/serializerByteBuffer_7_s5/I3 (0.175:0.244:0.312))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s9/F dut\/currentAddr_23_s5/I3 (0.002:0.005:0.008))
+       (INTERCONNECT dut\/n200_s14/F dut\/serializerEnable_s2/CE (0.175:0.212:0.249))
+       (INTERCONNECT dut\/n214_s15/F dut\/n214_s13/I3 (0.207:0.297:0.386))
+       (INTERCONNECT dut\/n214_s15/F dut\/n216_s13/I3 (0.207:0.297:0.386))
+       (INTERCONNECT dut\/n214_s15/F dut\/n200_s13/I3 (0.390:0.518:0.646))
+       (INTERCONNECT dut\/n214_s15/F dut\/n202_s14/I1 (0.006:0.013:0.020))
+       (INTERCONNECT dut\/n214_s15/F dut\/n206_s13/I1 (0.006:0.013:0.020))
+       (INTERCONNECT dut\/n214_s15/F dut\/n210_s14/I3 (0.390:0.518:0.646))
+       (INTERCONNECT dut\/n214_s15/F dut\/n208_s14/I3 (0.390:0.518:0.646))
+       (INTERCONNECT dut\/n214_s15/F dut\/n212_s14/I3 (0.185:0.251:0.316))
+       (INTERCONNECT dut\/n214_s15/F dut\/n204_s14/I3 (0.185:0.251:0.316))
+       (INTERCONNECT dut\/n198_s15/F dut\/n198_s12/I2 (0.001:0.003:0.004))
+       (INTERCONNECT dut\/n176_s13/F dut\/currentAddr_7_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n581_s2/F dut\/currentCmd_3_s0/CE (0.427:0.515:0.603))
+       (INTERCONNECT dut\/n581_s2/F dut\/currentCmd_2_s0/CE (0.427:0.515:0.603))
+       (INTERCONNECT dut\/n581_s2/F dut\/currentCmd_1_s0/CE (0.427:0.515:0.603))
+       (INTERCONNECT dut\/n581_s2/F dut\/currentCmd_0_s0/CE (0.815:1.067:1.318))
+       (INTERCONNECT dut\/n37_s3/F dut\/addrCycleCount_0_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n120_s3/F dut\/n202_s15/I2 (0.004:0.008:0.012))
+       (INTERCONNECT dut\/n120_s3/F dut\/serializerByteBuffer_7_s9/I0 (0.004:0.008:0.012))
+       (INTERCONNECT dut\/n120_s3/F dut\/addrCycleCount_1_s0/CE (0.373:0.495:0.616))
+       (INTERCONNECT dut\/n85_s3/F dut\/dmmyCycleCount_0_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n123_s2/F dut\/n198_s12/I1 (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n123_s2/F dut\/dmmyCycleCount_2_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n123_s2/F dut\/dmmyCycleCount_1_s0/CE (0.180:0.218:0.256))
+       (INTERCONNECT dut\/n194_s17/F dut\/flashState_2_s3/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n196_s15/F dut\/flashState_1_s3/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n210_s14/F dut\/serializerByteBuffer_3_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n208_s14/F dut\/serializerByteBuffer_4_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n212_s14/F dut\/serializerByteBuffer_2_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n204_s14/F dut\/serializerByteBuffer_6_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n45_s2/F dut\/currentAddr_23_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n53_s2/F dut\/currentAddr_15_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/deserializerEnable_s0/Q dut\/n610_s0/I3 (0.177:0.216:0.254))
+       (INTERCONNECT dut\/deserializerEnable_s0/Q dut\/fMclk_d_s/I0 (0.198:0.283:0.368))
+       (INTERCONNECT dut\/deserializerEnable_s0/Q dut\/n430_s2/I (0.000:0.000:0.000))
+       (INTERCONNECT dut\/serializerEnable_s2/Q dut\/n604_s0/I1 (0.636:0.862:1.088))
+       (INTERCONNECT dut\/serializerEnable_s2/Q dut\/n200_s13/I2 (0.200:0.287:0.374))
+       (INTERCONNECT dut\/serializerEnable_s2/Q dut\/n381_s2/I (0.000:0.000:0.000))
+       (INTERCONNECT dut\/serMclkEnable_n_s1/Q dut\/fMclk_d_s/I1 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/n381_s2/O dut\/serMclkEnable_n_s1/SET (0.586:0.845:1.105))
+       (INTERCONNECT dut\/n381_s2/O dut\/mosiOut_7_s1/RESET (0.623:0.799:0.975))
+       (INTERCONNECT dut\/n381_s2/O dut\/mosiOut_6_s1/RESET (0.570:0.774:0.978))
+       (INTERCONNECT dut\/n381_s2/O dut\/mosiOut_5_s1/RESET (0.430:0.524:0.619))
+       (INTERCONNECT dut\/n381_s2/O dut\/mosiOut_4_s1/RESET (0.430:0.524:0.619))
+       (INTERCONNECT dut\/n381_s2/O dut\/mosiOut_3_s1/RESET (0.430:0.524:0.619))
+       (INTERCONNECT dut\/n381_s2/O dut\/mosiOut_2_s1/RESET (0.623:0.799:0.975))
+       (INTERCONNECT dut\/n381_s2/O dut\/mosiOut_1_s1/RESET (0.623:0.799:0.975))
+       (INTERCONNECT dut\/n381_s2/O dut\/MOSI_s1/RESET (0.846:1.212:1.578))
+       (INTERCONNECT dut\/n381_s2/O dut\/WrDataReady_s3/RESET (0.781:1.123:1.464))
+       (INTERCONNECT dut\/n430_s2/O dut\/deserializerBuffer_1_s0/RESET (0.427:0.516:0.604))
+       (INTERCONNECT dut\/n430_s2/O dut\/deserializerBuffer_0_s0/RESET (0.427:0.516:0.604))
+       (INTERCONNECT dut\/n430_s2/O dut\/RdDataValid_s1/RESET (0.427:0.516:0.604))
+       (INTERCONNECT dut\/n375_s2/F dut\/serializerCycleCount_0_s1/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n425_s2/F dut\/deserializerCycleCount_0_s0/D (0.000:0.000:0.000))
+       (INTERCONNECT dut\/n192_s14/O dut\/flashState_0_s2/CE (0.632:0.810:0.988))
+       (INTERCONNECT dut\/currentCmd_0_s0/Q dut\/n572_s0/I1 (0.177:0.216:0.254))
+       (INTERCONNECT dut\/currentCmd_0_s0/Q dut\/n216_s13/I2 (0.408:0.628:0.849))
+       (INTERCONNECT dut\/currentCmd_0_s0/Q dut\/n200_s12/I1 (0.394:0.560:0.727))
+       (INTERCONNECT dut\/currentCmd_1_s0/Q dut\/n214_s13/I2 (0.633:0.856:1.079))
+       (INTERCONNECT dut\/currentCmd_1_s0/Q dut\/n572_s1/I2 (0.176:0.214:0.251))
+       (INTERCONNECT dut\/currentCmd_2_s0/Q dut\/n572_s1/I0 (0.176:0.244:0.312))
+       (INTERCONNECT dut\/currentCmd_2_s0/Q dut\/n206_s13/I0 (0.372:0.493:0.613))
+       (INTERCONNECT dut\/currentCmd_2_s0/Q dut\/n212_s14/I2 (0.424:0.513:0.601))
+       (INTERCONNECT dut\/currentCmd_2_s0/Q dut\/n204_s14/I2 (0.425:0.517:0.609))
+       (INTERCONNECT dut\/currentCmd_3_s0/Q dut\/n572_s1/I1 (0.176:0.214:0.251))
+       (INTERCONNECT dut\/currentCmd_3_s0/Q dut\/n202_s14/I0 (0.200:0.284:0.369))
+       (INTERCONNECT dut\/currentCmd_3_s0/Q dut\/n210_s14/I2 (0.574:0.777:0.980))
+       (INTERCONNECT dut\/currentCmd_3_s0/Q dut\/n208_s14/I2 (0.574:0.777:0.980))
+       (INTERCONNECT dut\/currentAddr_7_s0/Q dut\/n53_s2/I0 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/currentAddr_15_s0/Q dut\/n45_s2/I0 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/currentAddr_23_s0/Q dut\/n202_s15/I3 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/serializerByteBuffer_0_s0/Q dut\/n365_s1/I0 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/serializerByteBuffer_1_s0/Q dut\/n364_s0/I0 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/serializerByteBuffer_2_s0/Q dut\/n363_s0/I0 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/serializerByteBuffer_3_s0/Q dut\/n362_s0/I0 (0.171:0.241:0.310))
+       (INTERCONNECT dut\/serializerByteBuffer_4_s0/Q dut\/n361_s0/I0 (0.171:0.241:0.310))
+       (INTERCONNECT dut\/serializerByteBuffer_5_s0/Q dut\/n360_s0/I0 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/serializerByteBuffer_6_s0/Q dut\/n359_s0/I0 (0.196:0.279:0.362))
+       (INTERCONNECT dut\/serializerByteBuffer_7_s0/Q dut\/n366_s0/I0 (0.171:0.241:0.310))
+       (INTERCONNECT dut\/addrCycleCount_0_s1/Q dut\/n36_s1/I0 (0.424:0.513:0.601))
+       (INTERCONNECT dut\/addrCycleCount_0_s1/Q dut\/n202_s15/I0 (0.187:0.252:0.318))
+       (INTERCONNECT dut\/addrCycleCount_0_s1/Q dut\/n194_s14/I0 (0.187:0.252:0.318))
+       (INTERCONNECT dut\/addrCycleCount_0_s1/Q dut\/serializerByteBuffer_7_s9/I1 (0.187:0.252:0.318))
+       (INTERCONNECT dut\/addrCycleCount_0_s1/Q dut\/n37_s3/I0 (0.003:0.006:0.009))
+       (INTERCONNECT dut\/addrCycleCount_1_s0/Q dut\/n36_s1/I1 (0.002:0.004:0.006))
+       (INTERCONNECT dut\/addrCycleCount_1_s0/Q dut\/n202_s15/I1 (0.184:0.251:0.317))
+       (INTERCONNECT dut\/addrCycleCount_1_s0/Q dut\/n194_s14/I1 (0.184:0.251:0.317))
+       (INTERCONNECT dut\/addrCycleCount_1_s0/Q dut\/serializerByteBuffer_7_s9/I2 (0.184:0.251:0.317))
+       (INTERCONNECT dut\/dmmyCycleCount_0_s1/Q dut\/n84_s1/I2 (0.184:0.251:0.317))
+       (INTERCONNECT dut\/dmmyCycleCount_0_s1/Q dut\/n83_s1/I0 (0.184:0.251:0.317))
+       (INTERCONNECT dut\/dmmyCycleCount_0_s1/Q dut\/n198_s13/I2 (0.184:0.251:0.317))
+       (INTERCONNECT dut\/dmmyCycleCount_0_s1/Q dut\/n85_s3/I3 (0.002:0.004:0.006))
+       (INTERCONNECT dut\/dmmyCycleCount_1_s0/Q dut\/n84_s1/I1 (0.003:0.006:0.009))
+       (INTERCONNECT dut\/dmmyCycleCount_1_s0/Q dut\/n83_s1/I1 (0.176:0.244:0.312))
+       (INTERCONNECT dut\/dmmyCycleCount_1_s0/Q dut\/n198_s13/I0 (0.177:0.216:0.254))
+       (INTERCONNECT dut\/dmmyCycleCount_2_s0/Q dut\/n84_s1/I0 (0.181:0.220:0.258))
+       (INTERCONNECT dut\/dmmyCycleCount_2_s0/Q dut\/n83_s1/I2 (0.002:0.004:0.006))
+       (INTERCONNECT dut\/dmmyCycleCount_2_s0/Q dut\/n198_s13/I1 (0.181:0.220:0.258))
+       (INTERCONNECT dut\/deserializerBuffer_0_s0/Q dut\/fData_RD_1_s0/D (0.904:1.163:1.421))
+       (INTERCONNECT dut\/deserializerBuffer_0_s0/Q dut\/deserializerBuffer_1_s0/D (0.461:0.588:0.715))
+       (INTERCONNECT dut\/deserializerBuffer_1_s0/Q dut\/fData_RD_2_s0/D (0.903:1.161:1.418))
+       (INTERCONNECT dut\/deserializerCycleCount_0_s0/Q dut\/n610_s0/I0 (0.176:0.244:0.312))
+       (INTERCONNECT dut\/deserializerCycleCount_0_s0/Q dut\/RdDataValid_s3/I0 (0.187:0.252:0.318))
+       (INTERCONNECT dut\/deserializerCycleCount_0_s0/Q dut\/n424_s0/I0 (0.186:0.227:0.269))
+       (INTERCONNECT dut\/deserializerCycleCount_0_s0/Q dut\/n423_s0/I0 (0.186:0.227:0.269))
+       (INTERCONNECT dut\/deserializerCycleCount_0_s0/Q dut\/n422_s0/I0 (0.186:0.227:0.269))
+       (INTERCONNECT dut\/deserializerCycleCount_0_s0/Q dut\/n415_s1/I0 (0.187:0.252:0.318))
+       (INTERCONNECT dut\/deserializerCycleCount_0_s0/Q dut\/n425_s2/I0 (0.003:0.006:0.009))
+       (INTERCONNECT dut\/deserializerCycleCount_1_s0/Q dut\/n610_s0/I1 (0.182:0.223:0.265))
+       (INTERCONNECT dut\/deserializerCycleCount_1_s0/Q dut\/RdDataValid_s3/I3 (0.184:0.250:0.317))
+       (INTERCONNECT dut\/deserializerCycleCount_1_s0/Q dut\/n424_s0/I1 (0.003:0.008:0.012))
+       (INTERCONNECT dut\/deserializerCycleCount_1_s0/Q dut\/n423_s0/I1 (0.182:0.223:0.265))
+       (INTERCONNECT dut\/deserializerCycleCount_1_s0/Q dut\/n422_s0/I1 (0.179:0.246:0.314))
+       (INTERCONNECT dut\/deserializerCycleCount_1_s0/Q dut\/n415_s1/I1 (0.184:0.250:0.317))
+       (INTERCONNECT dut\/deserializerCycleCount_2_s0/Q dut\/RdDataValid_s3/I2 (0.181:0.248:0.315))
+       (INTERCONNECT dut\/deserializerCycleCount_2_s0/Q dut\/n423_s0/I2 (0.003:0.006:0.009))
+       (INTERCONNECT dut\/deserializerCycleCount_2_s0/Q dut\/n422_s0/I2 (0.182:0.222:0.262))
+       (INTERCONNECT dut\/deserializerCycleCount_2_s0/Q dut\/n610_s1/I1 (0.182:0.222:0.262))
+       (INTERCONNECT dut\/deserializerCycleCount_2_s0/Q dut\/n415_s1/I3 (0.181:0.248:0.315))
+       (INTERCONNECT dut\/deserializerCycleCount_3_s0/Q dut\/RdDataValid_s3/I1 (0.184:0.251:0.317))
+       (INTERCONNECT dut\/deserializerCycleCount_3_s0/Q dut\/n422_s0/I3 (0.002:0.004:0.006))
+       (INTERCONNECT dut\/deserializerCycleCount_3_s0/Q dut\/n610_s1/I0 (0.174:0.243:0.311))
+       (INTERCONNECT dut\/deserializerCycleCount_3_s0/Q dut\/n415_s1/I2 (0.184:0.251:0.317))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/currentAddr_23_s5/I1 (0.389:0.514:0.639))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n572_s2/I1 (0.434:0.529:0.625))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/serializerByteBuffer_7_s6/I3 (0.434:0.529:0.625))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n196_s13/I1 (0.622:0.796:0.969))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n194_s14/I3 (0.389:0.514:0.639))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n200_s14/I2 (0.625:0.799:0.973))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n214_s15/I1 (0.427:0.519:0.610))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n198_s15/I0 (0.180:0.221:0.263))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n176_s13/I0 (0.215:0.304:0.394))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n581_s2/I0 (0.434:0.529:0.625))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n37_s3/I1 (0.189:0.254:0.319))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n120_s3/I0 (0.215:0.304:0.394))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n85_s3/I0 (0.189:0.254:0.319))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n123_s2/I0 (0.183:0.250:0.316))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n45_s2/I1 (0.215:0.304:0.394))
+       (INTERCONNECT dut\/flashState_0_s2/Q dut\/n53_s2/I1 (0.215:0.304:0.394))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n572_s2/I0 (0.384:0.511:0.637))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n120_s1/I1 (0.413:0.637:0.862))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/serializerByteBuffer_7_s6/I1 (0.384:0.511:0.637))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n200_s14/I1 (0.413:0.637:0.862))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n214_s15/I2 (0.410:0.634:0.858))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n198_s15/I2 (0.630:0.811:0.993))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n176_s13/I2 (0.435:0.534:0.634))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n581_s2/I2 (0.384:0.511:0.637))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n37_s3/I3 (0.625:0.799:0.973))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n120_s3/I2 (0.432:0.531:0.630))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n85_s3/I2 (0.625:0.799:0.973))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n123_s2/I2 (0.625:0.805:0.986))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n194_s17/I1 (0.180:0.221:0.263))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n196_s15/I1 (0.005:0.012:0.018))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n45_s2/I3 (0.435:0.534:0.634))
+       (INTERCONNECT dut\/flashState_1_s3/Q dut\/n53_s2/I3 (0.432:0.531:0.630))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n572_s0/I0 (0.382:0.508:0.633))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/currentAddr_23_s5/I0 (0.428:0.523:0.619))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n120_s1/I0 (0.413:0.637:0.862))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/serializerByteBuffer_7_s6/I2 (0.382:0.508:0.633))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n200_s12/I2 (0.412:0.638:0.863))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n200_s13/I0 (0.611:0.918:1.225))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n200_s14/I0 (0.413:0.637:0.862))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n214_s15/I3 (0.415:0.641:0.866))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n198_s15/I3 (0.626:0.804:0.981))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n176_s13/I3 (0.431:0.526:0.622))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n581_s2/I3 (0.399:0.569:0.740))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n37_s3/I2 (0.579:0.785:0.992))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n120_s3/I1 (0.428:0.523:0.619))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n85_s3/I1 (0.579:0.785:0.992))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n123_s2/I1 (0.626:0.804:0.981))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n194_s17/I0 (0.005:0.012:0.018))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n196_s15/I0 (0.183:0.250:0.316))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n45_s2/I2 (0.629:0.807:0.984))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n53_s2/I2 (0.629:0.807:0.984))
+       (INTERCONNECT dut\/flashState_2_s3/Q dut\/n192_s14/I (0.000:0.000:0.000))
+       (INTERCONNECT dut\/mosiOut_1_s1/Q dut\/n364_s0/I1 (0.423:0.509:0.595))
+       (INTERCONNECT dut\/mosiOut_2_s1/Q dut\/n363_s0/I1 (0.171:0.241:0.310))
+       (INTERCONNECT dut\/mosiOut_3_s1/Q dut\/n362_s0/I1 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/mosiOut_4_s1/Q dut\/n361_s0/I1 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/mosiOut_5_s1/Q dut\/n360_s0/I1 (0.171:0.241:0.310))
+       (INTERCONNECT dut\/mosiOut_6_s1/Q dut\/n359_s0/I1 (0.171:0.241:0.310))
+       (INTERCONNECT dut\/mosiOut_7_s1/Q dut\/n366_s0/I1 (0.175:0.212:0.249))
+       (INTERCONNECT dut\/serializerCycleCount_0_s1/Q dut\/n356_s0/I0 (0.194:0.237:0.280))
+       (INTERCONNECT dut\/serializerCycleCount_0_s1/Q dut\/n370_s0/I3 (0.194:0.237:0.280))
+       (INTERCONNECT dut\/serializerCycleCount_0_s1/Q dut\/n374_s0/I0 (0.194:0.237:0.280))
+       (INTERCONNECT dut\/serializerCycleCount_0_s1/Q dut\/n373_s0/I0 (0.194:0.237:0.280))
+       (INTERCONNECT dut\/serializerCycleCount_0_s1/Q dut\/n372_s0/I0 (0.194:0.237:0.280))
+       (INTERCONNECT dut\/serializerCycleCount_0_s1/Q dut\/n375_s2/I0 (0.002:0.004:0.006))
+       (INTERCONNECT dut\/serializerCycleCount_1_s1/Q dut\/n356_s0/I1 (0.186:0.227:0.269))
+       (INTERCONNECT dut\/serializerCycleCount_1_s1/Q dut\/n370_s0/I1 (0.186:0.227:0.269))
+       (INTERCONNECT dut\/serializerCycleCount_1_s1/Q dut\/n374_s0/I1 (0.003:0.006:0.009))
+       (INTERCONNECT dut\/serializerCycleCount_1_s1/Q dut\/n373_s0/I1 (0.176:0.244:0.312))
+       (INTERCONNECT dut\/serializerCycleCount_1_s1/Q dut\/n372_s0/I1 (0.186:0.227:0.269))
+       (INTERCONNECT dut\/serializerCycleCount_2_s1/Q dut\/n356_s0/I2 (0.185:0.225:0.266))
+       (INTERCONNECT dut\/serializerCycleCount_2_s1/Q dut\/n370_s0/I2 (0.185:0.225:0.266))
+       (INTERCONNECT dut\/serializerCycleCount_2_s1/Q dut\/n373_s0/I2 (0.002:0.004:0.006))
+       (INTERCONNECT dut\/serializerCycleCount_2_s1/Q dut\/n372_s0/I2 (0.185:0.225:0.266))
+       (INTERCONNECT dut\/serializerCycleCount_3_s1/Q dut\/n356_s0/I3 (0.181:0.220:0.258))
+       (INTERCONNECT dut\/serializerCycleCount_3_s1/Q dut\/n370_s0/I0 (0.181:0.220:0.258))
+       (INTERCONNECT dut\/serializerCycleCount_3_s1/Q dut\/n372_s0/I3 (0.002:0.004:0.006))
+     )
+    )
+  )
+)

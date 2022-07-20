@@ -1,9 +1,9 @@
 //P25Q32H command list, see datasheet page 22
 `define FREAD 8'h0B //Max freq is around 120MHz
 `define READ 8'h03 //Max freq allowed is around 70MHz
-`define RSTEN 8'h66
-`define RST 8'h99
-`define PP 8'h02
+`define RSTEN 8'h66 //Reset Enable
+`define RST 8'h99   //Soft reset
+`define PP 8'h02 //page program
 
 module nano4k_spi_flash(
                             input reset_n,
@@ -102,7 +102,7 @@ module nano4k_spi_flash(
                         deserializerEnable <= 1;
                         if (RdDataValid) begin
                             //fData_RD <= deserializerBuffer;
-                            //This isn't nice, but deserializer is one clock behind
+                            //This isn't nice, but deserializer is one spi clock behind
                             fData_RD <= {deserializerBuffer, MISO};
                         end
                     end else begin

@@ -1,6 +1,13 @@
 GowinSynthesis start
 Running parser ...
+Analyzing Verilog file 'D:\Nano4KProjects\nano4k_spi_nor_flash\src\gowin_clkdiv\gowin_clkdiv.v'
 Analyzing Verilog file 'D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v'
+Analyzing Verilog file 'D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v'
+WARN  (EX2565) : Port 'reset_n' is not connected on this instance("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v":101)
+Compiling module 'nano4k_spi_flash_top'("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v":1)
+Compiling module 'Gowin_CLKDIV'("D:\Nano4KProjects\nano4k_spi_nor_flash\src\gowin_clkdiv\gowin_clkdiv.v":9)
+WARN  (EX3791) : Expression size 23 truncated to fit in target size 22("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v":24)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v":35)
 Compiling module 'nano4k_spi_flash'("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":8)
 WARN  (EX3780) : Using initial value of 'numOfDmmyBytes' since it is never assigned("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":249)
 WARN  (EX3791) : Expression size 3 truncated to fit in target size 2("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":80)
@@ -9,9 +16,9 @@ WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("D:\Nano4KP
 WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":161)
 WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":182)
 WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":191)
-NOTE  (EX0101) : Current top module is "nano4k_spi_flash"
+WARN  (EX1987) : Input port 'reset_n' is not connected on this instance("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v":101)
+NOTE  (EX0101) : Current top module is "nano4k_spi_flash_top"
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input reset_n is unused("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v":9)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
