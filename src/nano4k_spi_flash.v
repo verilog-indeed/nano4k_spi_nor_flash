@@ -4,9 +4,10 @@
 `define RSTEN 8'h66 //Reset Enable
 `define RST 8'h99   //Soft reset
 `define PP 8'h02 //page program
+`define WREN 8'h06
 
 module nano4k_spi_flash(
-                            input reset_n,
+                            //input reset_n, //interface resets itself when interfaceEnable_n is deasserted
                             input interfaceEnable_n,
                             input interfaceClk,
                             input serialClk,
@@ -24,7 +25,6 @@ module nano4k_spi_flash(
                             output reg CS_n
                         );
     reg[7:0] currentCmd;
-    reg[7:0] writeBuffer;
     reg[23:0] currentAddr;
     reg[3:0] flashState;
 

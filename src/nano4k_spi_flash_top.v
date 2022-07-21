@@ -1,8 +1,8 @@
 module nano4k_spi_flash_top(
 								input crystalClk,
-								input reset,
-								output [2:0] ledOut,
-								output reg readStrobeIndicator,
+								input reset, //active low
+								output [3:0] ledOut,
+								output uartTX,
 
 								input fMiso,
 								output fChipSel,
@@ -10,9 +10,15 @@ module nano4k_spi_flash_top(
 								output fMclk	
 							);
 	wire i_clock;
-	wire s_clock = crystalClk;
+	wire s_clock;
 
-	Gowin_CLKDIV divide_by_eight(
+	Gowin_CLKDIV divide_by_eight_serial(
+        .clkout(s_clock), //output clkout
+        .hclkin(crystalClk), //input hclkin
+        .resetn(reset) //input resetn
+    );
+
+	Gowin_CLKDIV divide_by_eight_interface(
         .clkout(i_clock), //output clkout
         .hclkin(s_clock), //input hclkin
         .resetn(reset) //input resetn
@@ -25,40 +31,43 @@ module nano4k_spi_flash_top(
 			if ((writeStrobe && (flashCmd == `RSTEN || flashCmd == `RST))) begin
 				i_enable_n <= 1;
 			end
-			if (readStrobe) begin
-				readStrobeIndicator <= !readStrobeIndicator;
+			/*if (readStrobe) begin
 				i_enable_n <= 1;
 				readBuff <= rd_data;
-			end
+			end*/
 			case (testStateCounter)
+				
 				0: begin
-					wr_data <= wr_data + 1;
+					//wr_data <= wr_data + 1;
 					flashCmd <= `RSTEN;
 				end
-				1: begin
+				100: begin
 					i_enable_n <= 0;
 				end
-				10: begin
-					flashCmd <= `RST;
+				1010: begin
+					flashCmd <= `WREN;
 				end
-				11: begin
+				1011: begin
 					i_enable_n <= 0;
 				end
-				300: begin
+				100300: begin
 					flashCmd <= `PP;
-					flashAddr <= 8'hA0;
-					//wr_data <= 8'h05;
+					flashAddr <= 8'hA000;
+					wr_data <= 8'h05;
 				end
-				301: begin
+				100301: begin
 					i_enable_n <= 0;
 				end
-				306: begin
+				100309: begin
 					i_enable_n <= 1;
-					flashCmd <= `READ;
-					flashAddr <= 8'hA0;
 				end
-				310: begin
+				100320: begin
+					flashCmd <= `READ;
+					flashAddr <= 8'hA000;
 					i_enable_n <= 0;
+				end
+				100332: begin
+					//i_enable_n <= 1;
 				end
 				default: begin
 				end
@@ -69,7 +78,6 @@ module nano4k_spi_flash_top(
 			flashCmd <= 0;
 			i_enable_n <= 1;
 			wr_data <= 0;
-			readStrobeIndicator <= 0;
 		end
 	end
 
@@ -81,7 +89,7 @@ module nano4k_spi_flash_top(
 	reg[7:0] readBuff;
 	wire writeStrobe;
 	wire readStrobe;
-	assign ledOut = {!(readBuff[2:0])};
+	assign ledOut = ~(readBuff[3:0]);
 
 	nano4k_spi_flash dut(
         .interfaceClk(i_clock),
@@ -99,13 +107,23 @@ module nano4k_spi_flash_top(
         .MCLK(fMclk),
         .CS_n(fChipSel)
     );
-
+/*
+	Gowin_EMPU_Top cortexM3(
+		.sys_clk(crystalClk), //input sys_clk
+		//.gpioin({wr_data, readBuff}), //input [15:0] gpioin
+		.gpioin(testStateCounter[15:0]),
+		//.gpioout(gpioout_o), //output [15:0] gpioout
+		//.gpioouten(1'b0), //output [15:0] gpioouten
+		//.uart0_rxd(uart0_rxd_i), //input uart0_rxd
+		.uart0_txd(uartTX), //output uart0_txd
+		.reset_n(reset) //input reset_n
+	);
+*/
 	initial begin
 		testStateCounter <= 0;
 		flashAddr <= 0;
 		flashCmd <= 0;
 		i_enable_n <= 1;
 		wr_data <= 0;
-		readStrobeIndicator <= 0;
 	end
 endmodule
