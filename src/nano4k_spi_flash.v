@@ -5,6 +5,9 @@
 `define RST 8'h99   //Soft reset
 `define PP 8'h02 //page program
 `define WREN 8'h06
+`define RDSR 8'h05
+`define RDCR 8'h15
+`define RDID 8'h9F
 
 module nano4k_spi_flash(
                             //input reset_n, //interface resets itself when interfaceEnable_n is deasserted
@@ -22,7 +25,7 @@ module nano4k_spi_flash(
                             input MISO,
                             output reg MOSI,
                             output MCLK,
-                            output reg CS_n
+                            output CS_n
                         );
     reg[7:0] currentCmd;
     reg[23:0] currentAddr;
@@ -38,7 +41,7 @@ module nano4k_spi_flash(
     always @(posedge interfaceClk) begin
         //TODO raise an exit flag whenever the interface is about to go IDLE?
         if (!interfaceEnable_n) begin
-            CS_n <= 0;
+            //CS_n <= 0;
             case (flashState)
                 IDLE: begin
                     currentCmd <= fCommand;
@@ -101,9 +104,10 @@ module nano4k_spi_flash(
                     if (isReadCmd) begin
                         deserializerEnable <= 1;
                         if (RdDataValid) begin
-                            //fData_RD <= deserializerBuffer;
+							//doesn't work in simulation, works IRL
+                            fData_RD <= deserializerBuffer;
                             //This isn't nice, but deserializer is one spi clock behind
-                            fData_RD <= {deserializerBuffer, MISO};
+                            //fData_RD <= {deserializerBuffer, MISO};
                         end
                     end else begin
                         serializerEnable <= 1;
@@ -118,7 +122,7 @@ module nano4k_spi_flash(
             addrCycleCount <= 0;
             dmmyCycleCount <= 0;
             deserializerEnable <= 0;
-            CS_n <= 1;
+            //CS_n <= 1;
         end
     end
 
@@ -134,6 +138,7 @@ module nano4k_spi_flash(
     //CPOL=1 idle-high SPI clock
     //MCLK active when either or both serializer/deserializer clock controls are active
     assign MCLK = serialClk | (serMclkEnable_n && desMclkEnable_n);
+	assign CS_n = interfaceEnable_n;
 
     reg serializerEnable;
     reg[7:0] serializerByteBuffer;
@@ -222,6 +227,12 @@ module nano4k_spi_flash(
                 cmdHasDataPhase = 1;
                 isReadCmd = 0;
             end
+			`RDSR, `RDCR, `RDID: begin
+				cmdHasAddrPhase = 0;
+                cmdHasDmmyPhase = 0;
+                cmdHasDataPhase = 1;
+				isReadCmd = 1;
+			end
             default: begin
                 cmdHasAddrPhase = 0;
                 cmdHasDmmyPhase = 0;

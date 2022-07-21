@@ -25,10 +25,10 @@
    },
    {
     "InstFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash_top.v",
-    "InstLine" : 94,
+    "InstLine" : 115,
     "InstName" : "dut",
     "ModuleFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash.v",
-    "ModuleLine" : 9,
+    "ModuleLine" : 12,
     "ModuleName" : "nano4k_spi_flash"
    }
   ]

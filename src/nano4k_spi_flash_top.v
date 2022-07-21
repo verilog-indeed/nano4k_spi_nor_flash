@@ -28,7 +28,7 @@ module nano4k_spi_flash_top(
 	always@(posedge i_clock) begin
 		if (reset) begin
 			testStateCounter <= testStateCounter + 1;
-			if ((writeStrobe && (flashCmd == `RSTEN || flashCmd == `RST))) begin
+			if ((writeStrobe && (flashCmd == `RSTEN || flashCmd == `RST || flashCmd == `WREN))) begin
 				i_enable_n <= 1;
 			end
 			/*if (readStrobe) begin
@@ -49,6 +49,27 @@ module nano4k_spi_flash_top(
 				end
 				1011: begin
 					i_enable_n <= 0;
+				end
+				5000: begin
+					flashCmd <= `RDSR;
+					i_enable_n <= 0;
+				end
+				5005: begin
+					flashCmd <= `RDCR;
+					i_enable_n <= 1;
+				end
+				5006: begin
+					i_enable_n <= 0;
+				end
+				5011: begin
+					flashCmd <= `RDID;
+					i_enable_n <= 1;
+				end
+				5012: begin
+					i_enable_n <= 0;
+				end
+				5019: begin
+					i_enable_n <= 1;
 				end
 				100300: begin
 					flashCmd <= `PP;
