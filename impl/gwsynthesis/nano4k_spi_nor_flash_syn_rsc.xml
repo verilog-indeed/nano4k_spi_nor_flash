@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="nano4k_spi_flash_top" Register="30" Alu="21" Lut="74">
+<Module name="nano4k_spi_flash_top" Register="31" Alu="21" Lut="71">
     <SubModule name="divide_by_eight_serial"/>
     <SubModule name="divide_by_eight_interface"/>
-    <SubModule name="gw_gao_inst_0" Register="521" Alu="10" Lut="478" Bsram="4"/>
-    <SubModule name="dut" Register="57" Lut="65"/>
+    <SubModule name="gw_gao_inst_0" Register="525" Alu="10" Lut="470" Bsram="4"/>
+    <SubModule name="dut" Register="61" Lut="75"/>
 </Module>

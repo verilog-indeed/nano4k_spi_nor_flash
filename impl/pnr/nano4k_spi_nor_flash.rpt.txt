@@ -11,26 +11,26 @@
   <PnR Version>: V1.9.8.03 Education
   <Part Number>: GW1NSR-LV4CQN48PC6/I5
   <Device>: GW1NSR-4C
-  <Created Time>:Thu Jul 21 23:59:08 2022
+  <Created Time>:Fri Jul 22 00:08:34 2022
 
 
 2. PnR Details
 
   Running placement:
-    Placement Phase 0: CPU time = 0h 0m 0.213s, Elapsed time = 0h 0m 0.213s
-    Placement Phase 1: CPU time = 0h 0m 0.231s, Elapsed time = 0h 0m 0.231s
-    Placement Phase 2: CPU time = 0h 0m 0.216s, Elapsed time = 0h 0m 0.216s
+    Placement Phase 0: CPU time = 0h 0m 0.198s, Elapsed time = 0h 0m 0.199s
+    Placement Phase 1: CPU time = 0h 0m 0.161s, Elapsed time = 0h 0m 0.161s
+    Placement Phase 2: CPU time = 0h 0m 0.253s, Elapsed time = 0h 0m 0.254s
     Placement Phase 3: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
     Total Placement: CPU time = 0h 0m 3s, Elapsed time = 0h 0m 3s
  Running routing:
-    Routing Phase 0: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0.001s
+    Routing Phase 0: CPU time = 0h 0m 0.001s, Elapsed time = 0h 0m 0.001s
     Routing Phase 1: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
-    Routing Phase 2: CPU time = 0h 0m 0.825s, Elapsed time = 0h 0m 0.825s
+    Routing Phase 2: CPU time = 0h 0m 1s, Elapsed time = 0h 0m 1s
     Total Routing: CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
  Generate output files:
     CPU time = 0h 0m 2s, Elapsed time = 0h 0m 2s
 
- Total Time and Memory Usage: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s, Peak memory usage = 138MB
+ Total Time and Memory Usage: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s, Peak memory usage = 132MB
 
 
 3. Resource Usage Summary
@@ -38,15 +38,15 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 650/4608  14%
-    --LUT,ALU,ROM16           | 650(612 LUT, 38 ALU, 0 ROM16)
+  Logic                       | 649/4608  14%
+    --LUT,ALU,ROM16           | 649(611 LUT, 38 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 0
-  Register                    | 608/3570  17%
+  Register                    | 617/3570  17%
     --Logic Register as Latch | 0/3456  0%
-    --Logic Register as FF    | 608/3456  17%
+    --Logic Register as FF    | 617/3456  17%
     --I/O Register as Latch   | 0/114  0%
     --I/O Register as FF      | 0/114  0%
-  CLS                         | 563/2304  24%
+  CLS                         | 558/2304  24%
   I/O Port                    | 15
   I/O Buf                     | 15
     --Input Buf               | 6
@@ -85,7 +85,7 @@
   Global Clock  | Usage       
   -------------------------------
   PRIMARY       | 4/8(50%)
-  SECONDARY     | 3/8(37%)
+  SECONDARY     | 2/8(25%)
   GCLK_PIN      | 0/5(0%)
   PLL           | 0/2(0%)
   CLKDIV        | 2/6(33%)
@@ -103,7 +103,6 @@
   i_clock        | PRIMARY        |  LEFT
   control0[0]    | PRIMARY        |  LEFT RIGHT
   gao_jtag_reset | SECONDARY      |  -
-  n20_3          | SECONDARY      |  -
   rst_ao         | SECONDARY      |  -
   crystalClk_d   | HCLK           | RIGHT[1]
   s_clock        | HCLK           | TOP[1]

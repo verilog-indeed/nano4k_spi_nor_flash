@@ -3,8 +3,6 @@ Running parser ...
 Analyzing Verilog file 'D:\Nano4KProjects\nano4k_spi_nor_flash\src\gowin_clkdiv\gowin_clkdiv.v'
 Analyzing Verilog file 'D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash.v'
 Analyzing Verilog file 'D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v'
-WARN  (EX3792) : Literal value 'hA000 truncated to fit in 8 bits("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v":76)
-WARN  (EX3792) : Literal value 'hA000 truncated to fit in 8 bits("D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_flash_top.v":87)
 Analyzing Verilog file 'D:\DevTools\Gowin\Gowin_V1.9.8.03_Education\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_crc32.v'
 Analyzing Verilog file 'D:\DevTools\Gowin\Gowin_V1.9.8.03_Education\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v'
 Analyzing included file 'D:\DevTools\Gowin\Gowin_V1.9.8.03_Education\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_define.v'("D:\DevTools\Gowin\Gowin_V1.9.8.03_Education\IDE\data\ipcores\GAO\GW_AO_0\gw_ao_match.v":326)
