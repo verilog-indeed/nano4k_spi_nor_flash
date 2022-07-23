@@ -2,7 +2,7 @@
 //All rights reserved.
 //File Title: Post-PnR Simulation Model file
 //GOWIN Version: V1.9.8.03 Education
-//Created Time: Fri Jul 22 00:08:34 2022
+//Created Time: Sat Jul 23 15:07:15 2022
 
 module nano4k_spi_flash_top(
 	crystalClk,

@@ -4,10 +4,10 @@
 `define RSTEN 8'h66 //Reset Enable
 `define RST 8'h99   //Soft reset
 `define PP 8'h02 //page program
-`define WREN 8'h06
-`define RDSR 8'h05
-`define RDCR 8'h15
-`define RDID 8'h9F
+`define WREN 8'h06	//writing enable
+`define RDSR 8'h05	//read status register
+`define RDCR 8'h15	//read configuration register
+`define RDID 8'h9F	//read JEDEC ID + device ID
 
 module nano4k_spi_flash(
                             //input reset_n, //interface resets itself when interfaceEnable_n is deasserted
