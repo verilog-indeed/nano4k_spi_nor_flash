@@ -4,13 +4,14 @@
 `define RSTEN 8'h66 //Reset Enable
 `define RST 8'h99   //Soft reset
 `define PP 8'h02 //page program
+`define PE 8'h81 //page (256 bytes) erase
 `define WREN 8'h06	//writing enable
 `define RDSR 8'h05	//read status register
 `define RDCR 8'h15	//read configuration register
 `define RDID 8'h9F	//read JEDEC ID + device ID
 
 module nano4k_spi_flash(
-                            //input reset_n, //interface resets itself when interfaceEnable_n is deasserted
+                            //interface resets itself when interfaceEnable_n is deasserted
                             input interfaceEnable_n,
                             input interfaceClk,
                             input serialClk,
@@ -38,6 +39,7 @@ module nano4k_spi_flash(
     localparam DMMY_WAIT = 3;
     localparam DATA_PHASE = 4;
 
+    /*
     always @(posedge interfaceClk) begin
         //TODO raise an exit flag whenever the interface is about to go IDLE?
         if (!interfaceEnable_n) begin
@@ -125,10 +127,20 @@ module nano4k_spi_flash(
             //CS_n <= 1;
         end
     end
+    */
 
-    reg[1:0] addrCycleCount;
-    reg[2:0] dmmyCycleCount;
-    reg[2:0] numOfDmmyBytes;
+    //determines multiplication (bitshift) factor of phase cycles based on the transfer mode
+    //2'b11 for single IO SPI, 2'b10 for dual IO SPI, 2'b01 for quad IO SPI
+    reg[1:0] currentSPIMode;
+
+    reg[4:0] addrCycleCount;
+    reg[5:0] dmmyCycleCount;
+    //num of required cycles for each phase depends on instruction and transfer mode (1xIO, 2xIO, 4xIO)
+    //num of cycles = num of bytes * (8 for single SPI, 4 for dual SPI, 2 for quad SPI)
+    wire[4:0] numOfAddrCycles = 3 << currentSPIMode;
+    wire[5:0] numOfDmmyCycles = 1 << currentSPIMode; //TODO add support for RUID?
+    wire[3:0] numOfDataCycles = 1 << currentSPIMode;
+
 
     //serializer active-low clock control
     reg serMclkEnable_n;
@@ -139,28 +151,126 @@ module nano4k_spi_flash(
     //MCLK active when either or both serializer/deserializer clock controls are active
     assign MCLK = serialClk | (serMclkEnable_n && desMclkEnable_n);
 	assign CS_n = interfaceEnable_n;
+	
+    always@(posedge serialClk) begin
+        if (!interfaceEnable_n) begin
+            case (flashState)
+                IDLE: begin
+                    currentCmd <= fCommand;
+                    //chip expects 24-bit address but only need 22 bits to address the available 4MiB
+                    currentAddr <= {2'b0, fAddress};
+                    flashState <= CMD_TX;
+                end
+                CMD_TX: begin
+                    if (internalWriteReady) begin
+                        if (cmdHasAddrPhase)  begin
+                            flashState <= ADDR_TX;
+                        end else if (cmdHasDmmyPhase) begin
+                            flashState <= DMMY_WAIT;
+                        end else if (cmdHasDataPhase) begin
+                            flashState <= DATA_PHASE;
+							serializerByteBuffer <= fData_WR;
+                        end else begin
+                            flashState <= IDLE;
+                        end
+                        serializerEnable <= 0;
+                    end else begin
+                        serializerEnable <= 1;
+                        serializerByteBuffer <= currentCmd;
+                    end
+                end
+                ADDR_TX: begin
+                    if (addrCycleCount == numOfAddrCycles) begin
+                        addrCycleCount <= 0;
+                        if (cmdHasDmmyPhase) begin 
+                            flashState <= DMMY_WAIT;
+                        end else if (cmdHasDataPhase) begin
+                            flashState <= DATA_PHASE;
+							serializerByteBuffer <= fData_WR;
+                        end else begin
+                            flashState <= IDLE;
+                        end
+                        serializerEnable <= 0;
+                    end else begin
+						if (addrCycleCount[2:0] == 3'b0) begin
+							//current cycle is multiple of 8, shift in the next byte
+                        	{serializerByteBuffer, currentAddr} <= {serializerByteBuffer, currentAddr} << 8;
+						end
+                        serializerEnable <= 1;
+                        addrCycleCount <= addrCycleCount + 1;
+                    end 
+                    
+                end
+                DMMY_WAIT: begin
+                    //retransmit whatever is in the buffer to waste SPI clock cycles
+                    if (dmmyCycleCount == numOfDmmyCycles) begin
+                        serializerEnable <= 0;
+                        dmmyCycleCount <= 0;
+                        if (cmdHasDataPhase) begin
+                            flashState <= DATA_PHASE;
+							serializerByteBuffer <= fData_WR;
+                        end else begin
+                            flashState <= IDLE;
+							serializerEnable <= 0;
+                        end
+                    end else begin
+                        //waste MCLK cycles, data sent/received is Don't Care
+                        serializerEnable <= 1;
+                        dmmyCycleCount <= dmmyCycleCount + 1;
+                    end
+                end
+                DATA_PHASE: begin
+					if (isReadCmd) begin
+						deserializerEnable <= 1;
+						serializerEnable <= 0;
+						if (internalReadValid) begin
+                            fData_RD <= deserializerBuffer;
+							//fData_RD <= {deserializerBuffer, MISO} << 1;
+						end
+					end else begin
+						serializerEnable <= 1;
+						deserializerEnable <= 0;
+						if (internalWriteReady) begin
+							serializerByteBuffer <= fData_WR;
+						end
+					end
+                    //deassert interfaceEnable_n to exit the array read/write
+                end
+            endcase
+        end else begin
+            flashState <= IDLE;
+            serializerEnable <= 0;
+            addrCycleCount <= 0;
+            dmmyCycleCount <= 0;
+            deserializerEnable <= 0;
+        end
+    end
 
     reg serializerEnable;
     reg[7:0] serializerByteBuffer;
     reg[7:0] mosiOut;
     reg[3:0] serializerCycleCount;
+	reg internalWriteReady;
 
     //serialization block
     //load output data and enable SPI clock out on cycle 0
+    //TODO add support for 2xIO, 4xIO SPI?
     always@(negedge serialClk) begin
         if (serializerEnable) begin
             if (serializerCycleCount == 0) begin
+                internalWriteReady <= 0;
                 serMclkEnable_n <= 0;
-                WrDataReady <= 0;
                 mosiOut <= serializerByteBuffer << 1;
                 MOSI <= serializerByteBuffer[7];
             end else begin
                 {MOSI, mosiOut} <= {MOSI, mosiOut} << 1;
             end
-
-            if (serializerCycleCount == 7) begin
+/*			if (serializerCycleCount == 6) begin
                 //raise ready flag just in time for interfaceClk domain to sample it
-                WrDataReady <= 1;
+				internalWriteReady <= 1;
+			end*/
+            if (serializerCycleCount == 7) begin
+                internalWriteReady <= 1;
                 serializerCycleCount <= 0;
             end else begin 
                 serializerCycleCount <= serializerCycleCount + 1;
@@ -168,7 +278,7 @@ module nano4k_spi_flash(
         end else begin
             mosiOut <= 0;
             serMclkEnable_n <= 1;
-            WrDataReady <= 0;
+            internalWriteReady <= 0;
             serializerCycleCount <= 0;
             MOSI <= 0;
         end
@@ -178,29 +288,51 @@ module nano4k_spi_flash(
 
     reg[3:0] deserializerCycleCount;
     reg[7:0] deserializerBuffer;
+	reg internalReadValid;
+
+    
 	//deserialization block
+    //TODO add support for 2xIO, 4xIO SPI?
     always@(posedge serialClk) begin
         if (deserializerEnable) begin
             if (deserializerCycleCount == 0) begin
-                RdDataValid <= 0;
+                internalReadValid <= 0;
             end
             deserializerBuffer <= {deserializerBuffer, MISO};
-
+			/*
             if (deserializerCycleCount == 6) begin
-                RdDataValid <= 1;
+                internalReadValid <= 1;
             end
-
+			*/
             if (deserializerCycleCount == 7) begin
+                internalReadValid <= 1;
                 deserializerCycleCount <= 0;
             end else begin
                 deserializerCycleCount <= deserializerCycleCount + 1;
             end
         end else begin
             deserializerBuffer <= 0;
-            RdDataValid <= 0;
+            internalReadValid <= 0;
             deserializerCycleCount <= 0;
         end
     end
+
+	
+	always@(posedge serialClk) begin
+		if (cmdHasDataPhase) begin
+			RdDataValid <= internalReadValid && (flashState == DATA_PHASE);
+			WrDataReady <= internalWriteReady && (flashState == DATA_PHASE);
+		end else if (cmdHasDmmyPhase) begin
+			RdDataValid <= internalReadValid && (dmmyCycleCount == numOfDmmyCycles);
+			WrDataReady <= internalWriteReady && (dmmyCycleCount == numOfDmmyCycles);
+		end else if (cmdHasAddrPhase) begin
+			RdDataValid <= internalReadValid && (addrCycleCount == numOfAddrCycles);
+			WrDataReady <= internalWriteReady && (addrCycleCount == numOfAddrCycles);
+		end else begin
+			RdDataValid <= internalReadValid && (flashState == CMD_TX);
+			WrDataReady <= internalWriteReady && (flashState == CMD_TX);
+		end
+	end	
 
     reg cmdHasAddrPhase;
     reg cmdHasDmmyPhase;
@@ -227,6 +359,12 @@ module nano4k_spi_flash(
                 cmdHasDataPhase = 1;
                 isReadCmd = 0;
             end
+			`PE: begin
+				cmdHasAddrPhase = 1;
+                cmdHasDmmyPhase = 0;
+                cmdHasDataPhase = 0;
+                isReadCmd = 0;
+			end
 			`RDSR, `RDCR, `RDID: begin
 				cmdHasAddrPhase = 0;
                 cmdHasDmmyPhase = 0;
@@ -248,10 +386,12 @@ module nano4k_spi_flash(
         deserializerBuffer <= 0;
         addrCycleCount <= 0;
         dmmyCycleCount <= 0;
-        numOfDmmyBytes <= 1;
+        currentSPIMode <= 2'b11;
         serMclkEnable_n <= 1;
         WrDataReady <= 0;
         RdDataValid <= 0;
+		internalWriteReady <= 0;
+		internalReadValid <= 0;
         serializerEnable <= 0;
         mosiOut <= 0;
         currentCmd <= 0; 

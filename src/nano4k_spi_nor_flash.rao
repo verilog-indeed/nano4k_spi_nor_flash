@@ -4,21 +4,9 @@
     <Mode>Standard</Mode>
     <AoCore index="0" sample_clock="crystalClk" trig_type="0" storage_depth="1024" window_num="1" capture_amount="1024" trigger_pos="0" module_name="nano4k_spi_flash_top" force_trigger_by_falling_edge="false">
         <SignalList>
-            <Signal>i_clock</Signal>
             <Signal>fMclk</Signal>
-            <Signal>dut/interfaceEnable_n</Signal>
             <Signal>fChipSel</Signal>
             <Signal>fMiso</Signal>
-            <Bus name="dut/serializerByteBuffer[7:0]">
-                <Signal>dut/serializerByteBuffer[7]</Signal>
-                <Signal>dut/serializerByteBuffer[6]</Signal>
-                <Signal>dut/serializerByteBuffer[5]</Signal>
-                <Signal>dut/serializerByteBuffer[4]</Signal>
-                <Signal>dut/serializerByteBuffer[3]</Signal>
-                <Signal>dut/serializerByteBuffer[2]</Signal>
-                <Signal>dut/serializerByteBuffer[1]</Signal>
-                <Signal>dut/serializerByteBuffer[0]</Signal>
-            </Bus>
             <Signal>fMosi</Signal>
             <Bus name="dut/fData_RD[7:0]">
                 <Signal>dut/fData_RD[7]</Signal>
@@ -29,6 +17,16 @@
                 <Signal>dut/fData_RD[2]</Signal>
                 <Signal>dut/fData_RD[1]</Signal>
                 <Signal>dut/fData_RD[0]</Signal>
+            </Bus>
+            <Bus name="dut/fData_WR[7:0]">
+                <Signal>dut/fData_WR[7]</Signal>
+                <Signal>dut/fData_WR[6]</Signal>
+                <Signal>dut/fData_WR[5]</Signal>
+                <Signal>dut/fData_WR[4]</Signal>
+                <Signal>dut/fData_WR[3]</Signal>
+                <Signal>dut/fData_WR[2]</Signal>
+                <Signal>dut/fData_WR[1]</Signal>
+                <Signal>dut/fData_WR[0]</Signal>
             </Bus>
             <Bus name="dut/flashState[3:0]">
                 <Signal>dut/flashState[3]</Signal>
@@ -60,17 +58,8 @@
                 <Signal>testStateCounter[1]</Signal>
                 <Signal>testStateCounter[0]</Signal>
             </Bus>
-            <Bus name="dut/deserializerBuffer[7:0]">
-                <Signal>dut/deserializerBuffer[7]</Signal>
-                <Signal>dut/deserializerBuffer[6]</Signal>
-                <Signal>dut/deserializerBuffer[5]</Signal>
-                <Signal>dut/deserializerBuffer[4]</Signal>
-                <Signal>dut/deserializerBuffer[3]</Signal>
-                <Signal>dut/deserializerBuffer[2]</Signal>
-                <Signal>dut/deserializerBuffer[1]</Signal>
-                <Signal>dut/deserializerBuffer[0]</Signal>
-            </Bus>
             <Signal>dut/RdDataValid</Signal>
+            <Signal>dut/WrDataReady</Signal>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -118,12 +107,12 @@
             <Trigger index="15"/>
         </Triggers>
         <MatchUnits>
-            <MatchUnit index="0" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000000000000001011" value1="0000000000000000000000" trigger="0"/>
-            <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000000000100101101" value1="0000000000000000000000" trigger="0"/>
-            <MatchUnit index="2" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000011000011111100000" value1="0000000000000000000000" trigger="0"/>
-            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000001001110001000" value1="0000000000000000000000" trigger="0"/>
-            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000001001110010100" value1="0000000000000000000000" trigger="0"/>
-            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000001001110001000" value1="0000000000000000000000" trigger="0"/>
+            <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000001001111000000" value1="0000000000000000000000" trigger="0"/>
+            <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000011000011111100000" value1="0000000000000000000000" trigger="0"/>
+            <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000001010011000000" value1="0000000000000000000000" trigger="0"/>
+            <MatchUnit index="4" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000011000011111001101" value1="0000000000000000000000" trigger="0"/>
+            <MatchUnit index="5" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000011000011111100000" value1="0000000000000000000000" trigger="0"/>
             <MatchUnit index="6" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="7" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
@@ -136,8 +125,8 @@
             <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
         </MatchUnits>
         <Expressions type="Static">
-            <Expression>M2</Expression>
+            <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0001001111000010</GAO_ID>
+    <GAO_ID>1000011010101101</GAO_ID>
 </GAO_CONFIG>

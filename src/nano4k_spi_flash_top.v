@@ -2,7 +2,6 @@ module nano4k_spi_flash_top(
 								input crystalClk,
 								input reset, //active low
 								output [3:0] ledOut,
-								output uartTX,
 
 								input fMiso,
 								output fChipSel,
@@ -25,70 +24,76 @@ module nano4k_spi_flash_top(
     );
 
 	reg[21:0] testStateCounter;
-	always@(posedge i_clock) begin
+	always@(posedge s_clock) begin
 		if (reset) begin
 			testStateCounter <= testStateCounter + 1;
-			if ((writeStrobe && (flashCmd == `RSTEN || flashCmd == `RST || flashCmd == `WREN))) begin
+			if (writeStrobe || readStrobe) begin
 				i_enable_n <= 1;
 			end
-			/*if (readStrobe) begin
-				i_enable_n <= 1;
-				readBuff <= rd_data;
-			end*/
 			case (testStateCounter)
-				
-				0: begin
-					//wr_data <= wr_data + 1;
-					flashCmd <= `RSTEN;
-				end
-				100: begin
-					i_enable_n <= 0;
-				end
-				1010: begin
+				1110: begin
 					flashCmd <= `WREN;
+					i_enable_n <= 1;
 				end
-				1011: begin
+				1111: begin
 					i_enable_n <= 0;
 				end
-				5000: begin
-					flashCmd <= `RDSR;
+				1200: begin
+					flashCmd <= `PE;
+					flashAddr <= 22'hA001;
+					i_enable_n <= 1;
+				end
+				1201: begin
 					i_enable_n <= 0;
 				end
-				5005: begin
+				5055: begin
 					flashCmd <= `RDCR;
 					i_enable_n <= 1;
 				end
-				5006: begin
+				5056: begin
 					i_enable_n <= 0;
 				end
-				5011: begin
+				5311: begin
 					flashCmd <= `RDID;
 					i_enable_n <= 1;
 				end
-				5012: begin
+				5312: begin
 					i_enable_n <= 0;
 				end
-				5019: begin
+				5350: begin
 					i_enable_n <= 1;
+					wr_data <= wr_data + 1;
 				end
-				100300: begin
+				
+				900300: begin
+					flashCmd <= `WREN;
+					i_enable_n <= 0;
+				end
+				990250: begin
+					flashCmd <= `RDSR;
+					i_enable_n <= 0;
+				end
+				990300: begin
 					flashCmd <= `PP;
-					flashAddr <= 22'hA000;
-					wr_data <= 8'h05;
-				end
-				100301: begin
+					flashAddr <= 22'hA001;
 					i_enable_n <= 0;
+					wr_data <= wr_data + 1;
 				end
-				100309: begin
+				//Stops page program instruction at correct byte boundary
+				//TODO: tweak the ready/valid flags to show one clock cycle BEFORE in order to be sampled accordingly?
+				990344: begin
 					i_enable_n <= 1;
 				end
-				100320: begin
-					flashCmd <= `READ;
-					flashAddr <= 22'hA000;
+				
+				990350: begin
+					flashCmd <= `RDSR;
 					i_enable_n <= 0;
 				end
-				100332: begin
-					//i_enable_n <= 1;
+				
+				1000420: begin
+					flashCmd <= `FREAD;
+					flashAddr <= 22'hA001;
+					i_enable_n <= 0;
 				end
 				default: begin
 				end
@@ -128,18 +133,7 @@ module nano4k_spi_flash_top(
         .MCLK(fMclk),
         .CS_n(fChipSel)
     );
-/*
-	Gowin_EMPU_Top cortexM3(
-		.sys_clk(crystalClk), //input sys_clk
-		//.gpioin({wr_data, readBuff}), //input [15:0] gpioin
-		.gpioin(testStateCounter[15:0]),
-		//.gpioout(gpioout_o), //output [15:0] gpioout
-		//.gpioouten(1'b0), //output [15:0] gpioouten
-		//.uart0_rxd(uart0_rxd_i), //input uart0_rxd
-		.uart0_txd(uartTX), //output uart0_txd
-		.reset_n(reset) //input reset_n
-	);
-*/
+
 	initial begin
 		testStateCounter <= 0;
 		flashAddr <= 0;
