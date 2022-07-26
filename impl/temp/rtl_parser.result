@@ -9,7 +9,7 @@
   "SubInsts" : [
    {
     "InstFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash_top.v",
-    "InstLine" : 14,
+    "InstLine" : 12,
     "InstName" : "divide_by_eight_serial",
     "ModuleFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/gowin_clkdiv/gowin_clkdiv.v",
     "ModuleLine" : 9,
@@ -17,15 +17,7 @@
    },
    {
     "InstFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash_top.v",
-    "InstLine" : 20,
-    "InstName" : "divide_by_eight_interface",
-    "ModuleFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/gowin_clkdiv/gowin_clkdiv.v",
-    "ModuleLine" : 9,
-    "ModuleName" : "Gowin_CLKDIV"
-   },
-   {
-    "InstFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash_top.v",
-    "InstLine" : 120,
+    "InstLine" : 106,
     "InstName" : "dut",
     "ModuleFile" : "D:/Nano4KProjects/nano4k_spi_nor_flash/src/nano4k_spi_flash.v",
     "ModuleLine" : 13,

@@ -1,25 +1,17 @@
 module nano4k_spi_flash_top(
 								input crystalClk,
 								input reset, //active low
-								output [3:0] ledOut,
 
 								input fMiso,
 								output fChipSel,
 								output fMosi,
 								output fMclk	
 							);
-	wire i_clock;
 	wire s_clock;
 
 	Gowin_CLKDIV divide_by_eight_serial(
         .clkout(s_clock), //output clkout
         .hclkin(crystalClk), //input hclkin
-        .resetn(reset) //input resetn
-    );
-
-	Gowin_CLKDIV divide_by_eight_interface(
-        .clkout(i_clock), //output clkout
-        .hclkin(s_clock), //input hclkin
         .resetn(reset) //input resetn
     );
 
@@ -79,11 +71,6 @@ module nano4k_spi_flash_top(
 					i_enable_n <= 0;
 					wr_data <= wr_data + 1;
 				end
-				//Stops page program instruction at correct byte boundary
-				//TODO: tweak the ready/valid flags to show one clock cycle BEFORE in order to be sampled accordingly?
-				990344: begin
-					i_enable_n <= 1;
-				end
 				
 				990350: begin
 					flashCmd <= `RDSR;
@@ -115,10 +102,8 @@ module nano4k_spi_flash_top(
 	reg[7:0] readBuff;
 	wire writeStrobe;
 	wire readStrobe;
-	assign ledOut = ~(readBuff[3:0]);
 
 	nano4k_spi_flash dut(
-        .interfaceClk(i_clock),
         .serialClk(s_clock),
         .interfaceEnable_n(i_enable_n),
         .fCommand(flashCmd),

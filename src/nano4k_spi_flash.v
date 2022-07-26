@@ -13,7 +13,6 @@
 module nano4k_spi_flash(
                             //interface resets itself when interfaceEnable_n is deasserted
                             input interfaceEnable_n,
-                            input interfaceClk,
                             input serialClk,
                             input [7:0] fCommand,
                             input [21:0] fAddress,
@@ -265,10 +264,6 @@ module nano4k_spi_flash(
             end else begin
                 {MOSI, mosiOut} <= {MOSI, mosiOut} << 1;
             end
-/*			if (serializerCycleCount == 6) begin
-                //raise ready flag just in time for interfaceClk domain to sample it
-				internalWriteReady <= 1;
-			end*/
             if (serializerCycleCount == 7) begin
                 internalWriteReady <= 1;
                 serializerCycleCount <= 0;
@@ -299,11 +294,6 @@ module nano4k_spi_flash(
                 internalReadValid <= 0;
             end
             deserializerBuffer <= {deserializerBuffer, MISO};
-			/*
-            if (deserializerCycleCount == 6) begin
-                internalReadValid <= 1;
-            end
-			*/
             if (deserializerCycleCount == 7) begin
                 internalReadValid <= 1;
                 deserializerCycleCount <= 0;
@@ -317,20 +307,25 @@ module nano4k_spi_flash(
         end
     end
 
-	
+	//garbage garbage stinky block rewrite please
 	always@(posedge serialClk) begin
+		//need to check if the command has a data phase to prevent exiting early, it is not redundant
 		if (cmdHasDataPhase) begin
-			RdDataValid <= internalReadValid && (flashState == DATA_PHASE);
-			WrDataReady <= internalWriteReady && (flashState == DATA_PHASE);
+			//TODO This will not work with quad SPI, fix it
+			RdDataValid <= (internalReadValid || (deserializerCycleCount == 7))&& (flashState == DATA_PHASE);
+			WrDataReady <= (internalWriteReady || (serializerCycleCount == 7)) && (flashState == DATA_PHASE);
 		end else if (cmdHasDmmyPhase) begin
 			RdDataValid <= internalReadValid && (dmmyCycleCount == numOfDmmyCycles);
 			WrDataReady <= internalWriteReady && (dmmyCycleCount == numOfDmmyCycles);
 		end else if (cmdHasAddrPhase) begin
 			RdDataValid <= internalReadValid && (addrCycleCount == numOfAddrCycles);
 			WrDataReady <= internalWriteReady && (addrCycleCount == numOfAddrCycles);
+		end else if (flashState == CMD_TX) begin
+			RdDataValid <= internalReadValid;
+			WrDataReady <= internalWriteReady;
 		end else begin
-			RdDataValid <= internalReadValid && (flashState == CMD_TX);
-			WrDataReady <= internalWriteReady && (flashState == CMD_TX);
+			RdDataValid <= 0;
+			WrDataReady <= 0;
 		end
 	end	
 
