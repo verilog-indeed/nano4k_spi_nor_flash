@@ -4,7 +4,7 @@
 -cst D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_nor_flash.cst
 -cfg D:\Nano4KProjects\nano4k_spi_nor_flash\impl\pnr\device.cfg
 -sdc D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_nor_flash.sdc
--gao_crc 1000011010101101
+-gao_crc 0110001000110111
 -bit
 -tr
 -ph

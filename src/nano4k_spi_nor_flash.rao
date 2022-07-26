@@ -2,8 +2,14 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="crystalClk" trig_type="0" storage_depth="1024" window_num="1" capture_amount="1024" trigger_pos="0" module_name="nano4k_spi_flash_top" force_trigger_by_falling_edge="false">
+    <AoCore index="0" sample_clock="crystalClk" trig_type="0" storage_depth="512" window_num="1" capture_amount="512" trigger_pos="0" module_name="nano4k_spi_flash_top" force_trigger_by_falling_edge="false">
         <SignalList>
+            <Bus name="dut/serializerCycleCount[3:0]">
+                <Signal>dut/serializerCycleCount[3]</Signal>
+                <Signal>dut/serializerCycleCount[2]</Signal>
+                <Signal>dut/serializerCycleCount[1]</Signal>
+                <Signal>dut/serializerCycleCount[0]</Signal>
+            </Bus>
             <Signal>fMclk</Signal>
             <Signal>fChipSel</Signal>
             <Signal>fMiso</Signal>
@@ -60,6 +66,17 @@
             </Bus>
             <Signal>dut/RdDataValid</Signal>
             <Signal>dut/WrDataReady</Signal>
+            <Signal>cmdHasFinished</Signal>
+            <Bus name="dut/deserializerBuffer[7:0]">
+                <Signal>dut/deserializerBuffer[7]</Signal>
+                <Signal>dut/deserializerBuffer[6]</Signal>
+                <Signal>dut/deserializerBuffer[5]</Signal>
+                <Signal>dut/deserializerBuffer[4]</Signal>
+                <Signal>dut/deserializerBuffer[3]</Signal>
+                <Signal>dut/deserializerBuffer[2]</Signal>
+                <Signal>dut/deserializerBuffer[1]</Signal>
+                <Signal>dut/deserializerBuffer[0]</Signal>
+            </Bus>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -128,5 +145,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1000011010101101</GAO_ID>
+    <GAO_ID>0110001000110111</GAO_ID>
 </GAO_CONFIG>

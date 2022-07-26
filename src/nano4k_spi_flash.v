@@ -1,25 +1,64 @@
 //P25Q32H command list, see datasheet page 22
-`define FREAD 8'h0B //Max freq is around 120MHz
-`define READ 8'h03 //Max freq allowed is around 70MHz
+`define FREAD 8'h0B //Byte-read, keep interface active for array read, Fmax is around 120MHz
+`define READ 8'h03 //Byte-read, keep interface active for array read, Fmax is around 70MHz
 `define RSTEN 8'h66 //Reset Enable
 `define RST 8'h99   //Soft reset
-`define PP 8'h02 //page program
-`define PE 8'h81 //page (256 bytes) erase
-`define WREN 8'h06	//writing enable
-`define RDSR 8'h05	//read status register
-`define RDCR 8'h15	//read configuration register
-`define RDID 8'h9F	//read JEDEC ID + device ID
+`define PP 8'h02 //page program, if interface is kept active for more than 256 bytes the erase will wrap around to the set address.
+`define PE 8'h81 //page erase, the least significant byte is irrelevant since the entire page (256 bytes) will be erased from 0xXXXX00 to 0xXXXXFF
+`define WREN 8'h06	//set the write enable latch, remember to issue this command before erase/program instructions
+`define RDSR 8'h05	//read status register that contains the busy flag/write enable status etc, Little-endian, see datasheet pg.29
+`define RDCR 8'h15	//read configuration register for information about output drive strength, physical reset enable etc
+`define RDID 8'h9F	//read JEDEC ID + device ID, expect bytes 0x85, 0x60 and 0x16 respectively
 
 module nano4k_spi_flash(
-                            //interface resets itself when interfaceEnable_n is deasserted
+                            /* Active-low
+							Interface enable, directly wired to the flash's chip select
+							Interface resets itself when interfaceEnable_n is deasserted
+							*/
                             input interfaceEnable_n,
+
+							/*
+							Serial clock for both interface operation and data transmission
+							*/
                             input serialClk,
+							
+							/*
+							Flash command (instruction) input, see datasheet pg.22
+							Commands defined in this file are the only ones guaranteed to work properly.
+							*/
                             input [7:0] fCommand,
-                            input [21:0] fAddress,
+							
+							//R/W address input of the flash data
+                            input [23:0] fAddress,
+
+							//Write data byte input
                             input [7:0] fData_WR,
+
+							//Read data byte output.
                             output reg [7:0] fData_RD,
+
+							/* Active high
+							Indicates that the fData_RD byte is valid and safe to sample.
+							*/
                             output reg RdDataValid,
+
+							/* Active high
+							Indicates that byte-n has begun transmission in page program instruction,
+							and the interface is ready to accept byte-(n+1) for the next transmission.
+							Byte-(n+1) is sampled on the 7-th rising serialClk edge after WrDataReady goes low,
+							Byte-0 is sampled on the rising edge right before WrDataReady goes high for the first time.
+							Preferably fData_WR should have byte-0 at the same time
+							when enabling the interface and hold it until WrDataReady goes high.
+							*/
                             output reg WrDataReady,
+
+							/* Active high
+							Indicates that the instruction has finished execution and/or 
+							one byte has been transmitted/received in array read/write mode.
+							When you wish to end the command properly, deassert interfaceEnable_n
+							on the rising edge when cmdFinished is high.
+							*/
+							output reg cmdFinished,
 
                             //flash chip pins
                             input MISO,
@@ -37,96 +76,6 @@ module nano4k_spi_flash(
     localparam ADDR_TX = 2;
     localparam DMMY_WAIT = 3;
     localparam DATA_PHASE = 4;
-
-    /*
-    always @(posedge interfaceClk) begin
-        //TODO raise an exit flag whenever the interface is about to go IDLE?
-        if (!interfaceEnable_n) begin
-            //CS_n <= 0;
-            case (flashState)
-                IDLE: begin
-                    currentCmd <= fCommand;
-                    //chip expects 24-bit address but only need 22 bits to address the available 4MiB
-                    currentAddr <= {2'b0, fAddress};
-                    flashState <= CMD_TX;
-                end
-                CMD_TX: begin
-                    if (WrDataReady) begin
-                        if (cmdHasAddrPhase)  begin
-                            flashState <= ADDR_TX;
-                        end else if (cmdHasDmmyPhase) begin
-                            flashState <= DMMY_WAIT;
-                        end else if (cmdHasDataPhase) begin
-                            flashState <= DATA_PHASE;
-                        end else begin
-                            flashState <= IDLE;
-                        end
-                        serializerEnable <= 0;
-                    end else begin
-                        serializerEnable <= 1;
-                        serializerByteBuffer <= currentCmd;
-                    end
-                end
-                ADDR_TX: begin
-                    if (addrCycleCount == 3) begin
-                        addrCycleCount <= 0;
-                        if (cmdHasDmmyPhase) begin 
-                            flashState <= DMMY_WAIT;
-                        end else if (cmdHasDataPhase) begin
-                            flashState <= DATA_PHASE;
-                        end else begin
-                            flashState <= IDLE;
-                        end
-                        serializerEnable <= 0;
-                    end else begin
-                        {serializerByteBuffer, currentAddr} <= {serializerByteBuffer, currentAddr} << 8;
-                        serializerEnable <= 1;
-                        addrCycleCount <= addrCycleCount + 1;
-                    end 
-                    
-                end
-                DMMY_WAIT: begin
-                    //retransmit whatever is in the buffer to waste SPI clock cycles
-                    if (dmmyCycleCount == numOfDmmyBytes) begin
-                        serializerEnable <= 0;
-                        dmmyCycleCount <= 0;
-                        if (cmdHasDataPhase) begin
-                            flashState <= DATA_PHASE;
-                        end else begin
-                            flashState <= IDLE;
-                        end
-                    end else begin
-                        //waste MCLK cycles, data sent/received is Don't Care
-                        serializerEnable <= 1;
-                        dmmyCycleCount <= dmmyCycleCount + 1;
-                    end
-                end
-                DATA_PHASE: begin
-                    if (isReadCmd) begin
-                        deserializerEnable <= 1;
-                        if (RdDataValid) begin
-							//doesn't work in simulation, works IRL
-                            fData_RD <= deserializerBuffer;
-                            //This isn't nice, but deserializer is one spi clock behind
-                            //fData_RD <= {deserializerBuffer, MISO};
-                        end
-                    end else begin
-                        serializerEnable <= 1;
-                        serializerByteBuffer <= fData_WR;
-                    end
-                    //deassert interfaceEnable_n to exit the array read/write
-                end
-            endcase
-        end else begin
-            flashState <= IDLE;
-            serializerEnable <= 0;
-            addrCycleCount <= 0;
-            dmmyCycleCount <= 0;
-            deserializerEnable <= 0;
-            //CS_n <= 1;
-        end
-    end
-    */
 
     //determines multiplication (bitshift) factor of phase cycles based on the transfer mode
     //2'b11 for single IO SPI, 2'b10 for dual IO SPI, 2'b01 for quad IO SPI
@@ -150,14 +99,16 @@ module nano4k_spi_flash(
     //MCLK active when either or both serializer/deserializer clock controls are active
     assign MCLK = serialClk | (serMclkEnable_n && desMclkEnable_n);
 	assign CS_n = interfaceEnable_n;
-	
+	reg internalEn_n;
+
     always@(posedge serialClk) begin
-        if (!interfaceEnable_n) begin
+		internalEn_n <= interfaceEnable_n;
+        if (!internalEn_n) begin
+		//if (!interfaceEnable_n) begin
             case (flashState)
                 IDLE: begin
                     currentCmd <= fCommand;
-                    //chip expects 24-bit address but only need 22 bits to address the available 4MiB
-                    currentAddr <= {2'b0, fAddress};
+                    currentAddr <= fAddress;
                     flashState <= CMD_TX;
                 end
                 CMD_TX: begin
@@ -222,14 +173,18 @@ module nano4k_spi_flash(
 					if (isReadCmd) begin
 						deserializerEnable <= 1;
 						serializerEnable <= 0;
+						/*
 						if (internalReadValid) begin
-                            fData_RD <= deserializerBuffer;
-							//fData_RD <= {deserializerBuffer, MISO} << 1;
+							fData_RD <= deserializerBuffer;
+						end*/
+						if (deserializerCycleCount == 7) begin
+							fData_RD <= {deserializerBuffer, MISO};
 						end
 					end else begin
 						serializerEnable <= 1;
 						deserializerEnable <= 0;
-						if (internalWriteReady) begin
+						//if (internalWriteReady) begin
+						if (serializerCycleCount == 7) begin
 							serializerByteBuffer <= fData_WR;
 						end
 					end
@@ -308,22 +263,43 @@ module nano4k_spi_flash(
     end
 
 	//garbage garbage stinky block rewrite please
-	always@(posedge serialClk) begin
+	//TODO This will not work with quad SPI, fix it
+	always@(negedge serialClk) begin
 		//need to check if the command has a data phase to prevent exiting early, it is not redundant
 		if (cmdHasDataPhase) begin
-			//TODO This will not work with quad SPI, fix it
-			RdDataValid <= (internalReadValid || (deserializerCycleCount == 7))&& (flashState == DATA_PHASE);
-			WrDataReady <= (internalWriteReady || (serializerCycleCount == 7)) && (flashState == DATA_PHASE);
+			if (flashState == DATA_PHASE) begin
+				if (isReadCmd) begin
+					cmdFinished <= (deserializerCycleCount == 7);
+				end else begin
+					cmdFinished <= (serializerCycleCount == 7);
+				end
+			end else begin
+				cmdFinished <= 0;
+			end
+			RdDataValid <= internalReadValid && (flashState == DATA_PHASE);
+			WrDataReady <= internalWriteReady && (flashState == DATA_PHASE);
 		end else if (cmdHasDmmyPhase) begin
+			if ((flashState == DMMY_WAIT) && (dmmyCycleCount == numOfDmmyCycles)) begin
+				cmdFinished <= 1;
+			end else begin
+				cmdFinished <= 0;
+			end
 			RdDataValid <= internalReadValid && (dmmyCycleCount == numOfDmmyCycles);
 			WrDataReady <= internalWriteReady && (dmmyCycleCount == numOfDmmyCycles);
 		end else if (cmdHasAddrPhase) begin
+			if ((flashState == ADDR_TX) && (addrCycleCount == numOfAddrCycles)) begin
+				cmdFinished <= 1;
+			end else begin
+				cmdFinished <= 0;
+			end
 			RdDataValid <= internalReadValid && (addrCycleCount == numOfAddrCycles);
 			WrDataReady <= internalWriteReady && (addrCycleCount == numOfAddrCycles);
 		end else if (flashState == CMD_TX) begin
+			cmdFinished <= (serializerCycleCount == 7);
 			RdDataValid <= internalReadValid;
 			WrDataReady <= internalWriteReady;
 		end else begin
+			cmdFinished <= 0;
 			RdDataValid <= 0;
 			WrDataReady <= 0;
 		end

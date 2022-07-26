@@ -19,7 +19,7 @@ module nano4k_spi_flash_top(
 	always@(posedge s_clock) begin
 		if (reset) begin
 			testStateCounter <= testStateCounter + 1;
-			if (writeStrobe || readStrobe) begin
+			if (cmdHasFinished && flashCmd != `RDID) begin
 				i_enable_n <= 1;
 			end
 			case (testStateCounter)
@@ -45,14 +45,14 @@ module nano4k_spi_flash_top(
 				5056: begin
 					i_enable_n <= 0;
 				end
-				5311: begin
+				105311: begin
 					flashCmd <= `RDID;
 					i_enable_n <= 1;
 				end
-				5312: begin
+				105312: begin
 					i_enable_n <= 0;
 				end
-				5350: begin
+				105350: begin
 					i_enable_n <= 1;
 					wr_data <= wr_data + 1;
 				end
@@ -69,6 +69,10 @@ module nano4k_spi_flash_top(
 					flashCmd <= `PP;
 					flashAddr <= 22'hA001;
 					i_enable_n <= 0;
+					wr_data <= wr_data + 1;
+				end
+
+				990340: begin
 					wr_data <= wr_data + 1;
 				end
 				
@@ -102,6 +106,7 @@ module nano4k_spi_flash_top(
 	reg[7:0] readBuff;
 	wire writeStrobe;
 	wire readStrobe;
+	wire cmdHasFinished;
 
 	nano4k_spi_flash dut(
         .serialClk(s_clock),
@@ -112,6 +117,7 @@ module nano4k_spi_flash_top(
         .fData_RD(rd_data),
         .RdDataValid(readStrobe),
         .WrDataReady(writeStrobe),
+		.cmdFinished(cmdHasFinished),
 
         .MISO(fMiso),
         .MOSI(fMosi),
