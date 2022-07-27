@@ -4,42 +4,6 @@
     <Mode>Standard</Mode>
     <AoCore index="0" sample_clock="crystalClk" trig_type="0" storage_depth="512" window_num="1" capture_amount="512" trigger_pos="0" module_name="nano4k_spi_flash_top" force_trigger_by_falling_edge="false">
         <SignalList>
-            <Bus name="dut/serializerCycleCount[3:0]">
-                <Signal>dut/serializerCycleCount[3]</Signal>
-                <Signal>dut/serializerCycleCount[2]</Signal>
-                <Signal>dut/serializerCycleCount[1]</Signal>
-                <Signal>dut/serializerCycleCount[0]</Signal>
-            </Bus>
-            <Signal>fMclk</Signal>
-            <Signal>fChipSel</Signal>
-            <Signal>fMiso</Signal>
-            <Signal>fMosi</Signal>
-            <Bus name="dut/fData_RD[7:0]">
-                <Signal>dut/fData_RD[7]</Signal>
-                <Signal>dut/fData_RD[6]</Signal>
-                <Signal>dut/fData_RD[5]</Signal>
-                <Signal>dut/fData_RD[4]</Signal>
-                <Signal>dut/fData_RD[3]</Signal>
-                <Signal>dut/fData_RD[2]</Signal>
-                <Signal>dut/fData_RD[1]</Signal>
-                <Signal>dut/fData_RD[0]</Signal>
-            </Bus>
-            <Bus name="dut/fData_WR[7:0]">
-                <Signal>dut/fData_WR[7]</Signal>
-                <Signal>dut/fData_WR[6]</Signal>
-                <Signal>dut/fData_WR[5]</Signal>
-                <Signal>dut/fData_WR[4]</Signal>
-                <Signal>dut/fData_WR[3]</Signal>
-                <Signal>dut/fData_WR[2]</Signal>
-                <Signal>dut/fData_WR[1]</Signal>
-                <Signal>dut/fData_WR[0]</Signal>
-            </Bus>
-            <Bus name="dut/flashState[3:0]">
-                <Signal>dut/flashState[3]</Signal>
-                <Signal>dut/flashState[2]</Signal>
-                <Signal>dut/flashState[1]</Signal>
-                <Signal>dut/flashState[0]</Signal>
-            </Bus>
             <Bus name="testStateCounter[21:0]">
                 <Signal>testStateCounter[21]</Signal>
                 <Signal>testStateCounter[20]</Signal>
@@ -64,18 +28,38 @@
                 <Signal>testStateCounter[1]</Signal>
                 <Signal>testStateCounter[0]</Signal>
             </Bus>
+            <Signal>fMclk</Signal>
+            <Signal>fChipSel</Signal>
+            <Signal>fMiso</Signal>
+            <Signal>fMosi</Signal>
+            <Bus name="wr_data[7:0]">
+                <Signal>wr_data[7]</Signal>
+                <Signal>wr_data[6]</Signal>
+                <Signal>wr_data[5]</Signal>
+                <Signal>wr_data[4]</Signal>
+                <Signal>wr_data[3]</Signal>
+                <Signal>wr_data[2]</Signal>
+                <Signal>wr_data[1]</Signal>
+                <Signal>wr_data[0]</Signal>
+            </Bus>
+            <Bus name="rd_data[7:0]">
+                <Signal>rd_data[7]</Signal>
+                <Signal>rd_data[6]</Signal>
+                <Signal>rd_data[5]</Signal>
+                <Signal>rd_data[4]</Signal>
+                <Signal>rd_data[3]</Signal>
+                <Signal>rd_data[2]</Signal>
+                <Signal>rd_data[1]</Signal>
+                <Signal>rd_data[0]</Signal>
+            </Bus>
             <Signal>dut/RdDataValid</Signal>
             <Signal>dut/WrDataReady</Signal>
             <Signal>cmdHasFinished</Signal>
-            <Bus name="dut/deserializerBuffer[7:0]">
-                <Signal>dut/deserializerBuffer[7]</Signal>
-                <Signal>dut/deserializerBuffer[6]</Signal>
-                <Signal>dut/deserializerBuffer[5]</Signal>
-                <Signal>dut/deserializerBuffer[4]</Signal>
-                <Signal>dut/deserializerBuffer[3]</Signal>
-                <Signal>dut/deserializerBuffer[2]</Signal>
-                <Signal>dut/deserializerBuffer[1]</Signal>
-                <Signal>dut/deserializerBuffer[0]</Signal>
+            <Bus name="dut/flashState[3:0]">
+                <Signal>dut/flashState[3]</Signal>
+                <Signal>dut/flashState[2]</Signal>
+                <Signal>dut/flashState[1]</Signal>
+                <Signal>dut/flashState[0]</Signal>
             </Bus>
         </SignalList>
         <Triggers>
@@ -124,7 +108,7 @@
             <Trigger index="15"/>
         </Triggers>
         <MatchUnits>
-            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000001001110001000" value1="0000000000000000000000" trigger="0"/>
+            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0011110100001111100100" value1="0000000000000000000000" trigger="0"/>
             <MatchUnit index="1" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000001001111000000" value1="0000000000000000000000" trigger="0"/>
             <MatchUnit index="2" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000011000011111100000" value1="0000000000000000000000" trigger="0"/>
             <MatchUnit index="3" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0000000001010011000000" value1="0000000000000000000000" trigger="0"/>
@@ -145,5 +129,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0110001000110111</GAO_ID>
+    <GAO_ID>0100101100100111</GAO_ID>
 </GAO_CONFIG>

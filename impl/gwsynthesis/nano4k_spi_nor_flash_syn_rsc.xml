@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="nano4k_spi_flash_top" Register="38" Alu="28" Lut="79">
+<Module name="nano4k_spi_flash_top" Register="38" Alu="28" Lut="60">
     <SubModule name="divide_by_eight_serial"/>
-    <SubModule name="gw_gao_inst_0" Register="540" Alu="10" Lut="474" Bsram="2"/>
-    <SubModule name="dut" Register="72" Lut="108"/>
+    <SubModule name="dut" Register="71" Lut="110"/>
+    <SubModule name="gw_gao_inst_0" Register="492" Alu="10" Lut="462" Bsram="2"/>
 </Module>

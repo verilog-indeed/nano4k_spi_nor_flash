@@ -3,8 +3,7 @@
 -pn GW1NSR-LV4CQN48PC6/I5
 -cst D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_nor_flash.cst
 -cfg D:\Nano4KProjects\nano4k_spi_nor_flash\impl\pnr\device.cfg
--sdc D:\Nano4KProjects\nano4k_spi_nor_flash\src\nano4k_spi_nor_flash.sdc
--gao_crc 0110001000110111
+-gao_crc 0100101100100111
 -bit
 -tr
 -ph

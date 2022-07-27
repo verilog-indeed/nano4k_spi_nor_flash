@@ -97,14 +97,13 @@ module nano4k_spi_flash(
 
     //CPOL=1 idle-high SPI clock
     //MCLK active when either or both serializer/deserializer clock controls are active
-    assign MCLK = serialClk | (serMclkEnable_n && desMclkEnable_n);
+    assign MCLK = serialClk | (serMclkEnable_n && desMclkEnable_n) | CS_n;
 	assign CS_n = interfaceEnable_n;
 	reg internalEn_n;
 
     always@(posedge serialClk) begin
 		internalEn_n <= interfaceEnable_n;
         if (!internalEn_n) begin
-		//if (!interfaceEnable_n) begin
             case (flashState)
                 IDLE: begin
                     currentCmd <= fCommand;
@@ -173,18 +172,16 @@ module nano4k_spi_flash(
 					if (isReadCmd) begin
 						deserializerEnable <= 1;
 						serializerEnable <= 0;
-						/*
-						if (internalReadValid) begin
-							fData_RD <= deserializerBuffer;
-						end*/
+
+						//deserializerBuffer is one spi clock behind, shift in the last bit from MISO
 						if (deserializerCycleCount == 7) begin
 							fData_RD <= {deserializerBuffer, MISO};
 						end
 					end else begin
 						serializerEnable <= 1;
 						deserializerEnable <= 0;
-						//if (internalWriteReady) begin
 						if (serializerCycleCount == 7) begin
+							//sample the next byte for transmission
 							serializerByteBuffer <= fData_WR;
 						end
 					end

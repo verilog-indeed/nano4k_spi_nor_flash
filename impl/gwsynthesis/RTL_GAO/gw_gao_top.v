@@ -1,32 +1,4 @@
 module gw_gao(
-    \dut/serializerCycleCount[3] ,
-    \dut/serializerCycleCount[2] ,
-    \dut/serializerCycleCount[1] ,
-    \dut/serializerCycleCount[0] ,
-    fMclk,
-    fChipSel,
-    fMiso,
-    fMosi,
-    \dut/fData_RD[7] ,
-    \dut/fData_RD[6] ,
-    \dut/fData_RD[5] ,
-    \dut/fData_RD[4] ,
-    \dut/fData_RD[3] ,
-    \dut/fData_RD[2] ,
-    \dut/fData_RD[1] ,
-    \dut/fData_RD[0] ,
-    \dut/fData_WR[7] ,
-    \dut/fData_WR[6] ,
-    \dut/fData_WR[5] ,
-    \dut/fData_WR[4] ,
-    \dut/fData_WR[3] ,
-    \dut/fData_WR[2] ,
-    \dut/fData_WR[1] ,
-    \dut/fData_WR[0] ,
-    \dut/flashState[3] ,
-    \dut/flashState[2] ,
-    \dut/flashState[1] ,
-    \dut/flashState[0] ,
     \testStateCounter[21] ,
     \testStateCounter[20] ,
     \testStateCounter[19] ,
@@ -49,17 +21,33 @@ module gw_gao(
     \testStateCounter[2] ,
     \testStateCounter[1] ,
     \testStateCounter[0] ,
+    fMclk,
+    fChipSel,
+    fMiso,
+    fMosi,
+    \wr_data[7] ,
+    \wr_data[6] ,
+    \wr_data[5] ,
+    \wr_data[4] ,
+    \wr_data[3] ,
+    \wr_data[2] ,
+    \wr_data[1] ,
+    \wr_data[0] ,
+    \rd_data[7] ,
+    \rd_data[6] ,
+    \rd_data[5] ,
+    \rd_data[4] ,
+    \rd_data[3] ,
+    \rd_data[2] ,
+    \rd_data[1] ,
+    \rd_data[0] ,
     \dut/RdDataValid ,
     \dut/WrDataReady ,
     cmdHasFinished,
-    \dut/deserializerBuffer[7] ,
-    \dut/deserializerBuffer[6] ,
-    \dut/deserializerBuffer[5] ,
-    \dut/deserializerBuffer[4] ,
-    \dut/deserializerBuffer[3] ,
-    \dut/deserializerBuffer[2] ,
-    \dut/deserializerBuffer[1] ,
-    \dut/deserializerBuffer[0] ,
+    \dut/flashState[3] ,
+    \dut/flashState[2] ,
+    \dut/flashState[1] ,
+    \dut/flashState[0] ,
     crystalClk,
     tms_pad_i,
     tck_pad_i,
@@ -67,34 +55,6 @@ module gw_gao(
     tdo_pad_o
 );
 
-input \dut/serializerCycleCount[3] ;
-input \dut/serializerCycleCount[2] ;
-input \dut/serializerCycleCount[1] ;
-input \dut/serializerCycleCount[0] ;
-input fMclk;
-input fChipSel;
-input fMiso;
-input fMosi;
-input \dut/fData_RD[7] ;
-input \dut/fData_RD[6] ;
-input \dut/fData_RD[5] ;
-input \dut/fData_RD[4] ;
-input \dut/fData_RD[3] ;
-input \dut/fData_RD[2] ;
-input \dut/fData_RD[1] ;
-input \dut/fData_RD[0] ;
-input \dut/fData_WR[7] ;
-input \dut/fData_WR[6] ;
-input \dut/fData_WR[5] ;
-input \dut/fData_WR[4] ;
-input \dut/fData_WR[3] ;
-input \dut/fData_WR[2] ;
-input \dut/fData_WR[1] ;
-input \dut/fData_WR[0] ;
-input \dut/flashState[3] ;
-input \dut/flashState[2] ;
-input \dut/flashState[1] ;
-input \dut/flashState[0] ;
 input \testStateCounter[21] ;
 input \testStateCounter[20] ;
 input \testStateCounter[19] ;
@@ -117,51 +77,39 @@ input \testStateCounter[3] ;
 input \testStateCounter[2] ;
 input \testStateCounter[1] ;
 input \testStateCounter[0] ;
+input fMclk;
+input fChipSel;
+input fMiso;
+input fMosi;
+input \wr_data[7] ;
+input \wr_data[6] ;
+input \wr_data[5] ;
+input \wr_data[4] ;
+input \wr_data[3] ;
+input \wr_data[2] ;
+input \wr_data[1] ;
+input \wr_data[0] ;
+input \rd_data[7] ;
+input \rd_data[6] ;
+input \rd_data[5] ;
+input \rd_data[4] ;
+input \rd_data[3] ;
+input \rd_data[2] ;
+input \rd_data[1] ;
+input \rd_data[0] ;
 input \dut/RdDataValid ;
 input \dut/WrDataReady ;
 input cmdHasFinished;
-input \dut/deserializerBuffer[7] ;
-input \dut/deserializerBuffer[6] ;
-input \dut/deserializerBuffer[5] ;
-input \dut/deserializerBuffer[4] ;
-input \dut/deserializerBuffer[3] ;
-input \dut/deserializerBuffer[2] ;
-input \dut/deserializerBuffer[1] ;
-input \dut/deserializerBuffer[0] ;
+input \dut/flashState[3] ;
+input \dut/flashState[2] ;
+input \dut/flashState[1] ;
+input \dut/flashState[0] ;
 input crystalClk;
 input tms_pad_i;
 input tck_pad_i;
 input tdi_pad_i;
 output tdo_pad_o;
 
-wire \dut/serializerCycleCount[3] ;
-wire \dut/serializerCycleCount[2] ;
-wire \dut/serializerCycleCount[1] ;
-wire \dut/serializerCycleCount[0] ;
-wire fMclk;
-wire fChipSel;
-wire fMiso;
-wire fMosi;
-wire \dut/fData_RD[7] ;
-wire \dut/fData_RD[6] ;
-wire \dut/fData_RD[5] ;
-wire \dut/fData_RD[4] ;
-wire \dut/fData_RD[3] ;
-wire \dut/fData_RD[2] ;
-wire \dut/fData_RD[1] ;
-wire \dut/fData_RD[0] ;
-wire \dut/fData_WR[7] ;
-wire \dut/fData_WR[6] ;
-wire \dut/fData_WR[5] ;
-wire \dut/fData_WR[4] ;
-wire \dut/fData_WR[3] ;
-wire \dut/fData_WR[2] ;
-wire \dut/fData_WR[1] ;
-wire \dut/fData_WR[0] ;
-wire \dut/flashState[3] ;
-wire \dut/flashState[2] ;
-wire \dut/flashState[1] ;
-wire \dut/flashState[0] ;
 wire \testStateCounter[21] ;
 wire \testStateCounter[20] ;
 wire \testStateCounter[19] ;
@@ -184,17 +132,33 @@ wire \testStateCounter[3] ;
 wire \testStateCounter[2] ;
 wire \testStateCounter[1] ;
 wire \testStateCounter[0] ;
+wire fMclk;
+wire fChipSel;
+wire fMiso;
+wire fMosi;
+wire \wr_data[7] ;
+wire \wr_data[6] ;
+wire \wr_data[5] ;
+wire \wr_data[4] ;
+wire \wr_data[3] ;
+wire \wr_data[2] ;
+wire \wr_data[1] ;
+wire \wr_data[0] ;
+wire \rd_data[7] ;
+wire \rd_data[6] ;
+wire \rd_data[5] ;
+wire \rd_data[4] ;
+wire \rd_data[3] ;
+wire \rd_data[2] ;
+wire \rd_data[1] ;
+wire \rd_data[0] ;
 wire \dut/RdDataValid ;
 wire \dut/WrDataReady ;
 wire cmdHasFinished;
-wire \dut/deserializerBuffer[7] ;
-wire \dut/deserializerBuffer[6] ;
-wire \dut/deserializerBuffer[5] ;
-wire \dut/deserializerBuffer[4] ;
-wire \dut/deserializerBuffer[3] ;
-wire \dut/deserializerBuffer[2] ;
-wire \dut/deserializerBuffer[1] ;
-wire \dut/deserializerBuffer[0] ;
+wire \dut/flashState[3] ;
+wire \dut/flashState[2] ;
+wire \dut/flashState[1] ;
+wire \dut/flashState[0] ;
 wire crystalClk;
 wire tms_pad_i;
 wire tck_pad_i;
@@ -270,7 +234,7 @@ gw_con_top  u_icon_top(
 ao_top_0  u_la0_top(
     .control(control0[9:0]),
     .trig0_i({\testStateCounter[21] ,\testStateCounter[20] ,\testStateCounter[19] ,\testStateCounter[18] ,\testStateCounter[17] ,\testStateCounter[16] ,\testStateCounter[15] ,\testStateCounter[14] ,\testStateCounter[13] ,\testStateCounter[12] ,\testStateCounter[11] ,\testStateCounter[10] ,\testStateCounter[9] ,\testStateCounter[8] ,\testStateCounter[7] ,\testStateCounter[6] ,\testStateCounter[5] ,\testStateCounter[4] ,\testStateCounter[3] ,\testStateCounter[2] ,\testStateCounter[1] ,\testStateCounter[0] }),
-    .data_i({\dut/serializerCycleCount[3] ,\dut/serializerCycleCount[2] ,\dut/serializerCycleCount[1] ,\dut/serializerCycleCount[0] ,fMclk,fChipSel,fMiso,fMosi,\dut/fData_RD[7] ,\dut/fData_RD[6] ,\dut/fData_RD[5] ,\dut/fData_RD[4] ,\dut/fData_RD[3] ,\dut/fData_RD[2] ,\dut/fData_RD[1] ,\dut/fData_RD[0] ,\dut/fData_WR[7] ,\dut/fData_WR[6] ,\dut/fData_WR[5] ,\dut/fData_WR[4] ,\dut/fData_WR[3] ,\dut/fData_WR[2] ,\dut/fData_WR[1] ,\dut/fData_WR[0] ,\dut/flashState[3] ,\dut/flashState[2] ,\dut/flashState[1] ,\dut/flashState[0] ,\testStateCounter[21] ,\testStateCounter[20] ,\testStateCounter[19] ,\testStateCounter[18] ,\testStateCounter[17] ,\testStateCounter[16] ,\testStateCounter[15] ,\testStateCounter[14] ,\testStateCounter[13] ,\testStateCounter[12] ,\testStateCounter[11] ,\testStateCounter[10] ,\testStateCounter[9] ,\testStateCounter[8] ,\testStateCounter[7] ,\testStateCounter[6] ,\testStateCounter[5] ,\testStateCounter[4] ,\testStateCounter[3] ,\testStateCounter[2] ,\testStateCounter[1] ,\testStateCounter[0] ,\dut/RdDataValid ,\dut/WrDataReady ,cmdHasFinished,\dut/deserializerBuffer[7] ,\dut/deserializerBuffer[6] ,\dut/deserializerBuffer[5] ,\dut/deserializerBuffer[4] ,\dut/deserializerBuffer[3] ,\dut/deserializerBuffer[2] ,\dut/deserializerBuffer[1] ,\dut/deserializerBuffer[0] }),
+    .data_i({\testStateCounter[21] ,\testStateCounter[20] ,\testStateCounter[19] ,\testStateCounter[18] ,\testStateCounter[17] ,\testStateCounter[16] ,\testStateCounter[15] ,\testStateCounter[14] ,\testStateCounter[13] ,\testStateCounter[12] ,\testStateCounter[11] ,\testStateCounter[10] ,\testStateCounter[9] ,\testStateCounter[8] ,\testStateCounter[7] ,\testStateCounter[6] ,\testStateCounter[5] ,\testStateCounter[4] ,\testStateCounter[3] ,\testStateCounter[2] ,\testStateCounter[1] ,\testStateCounter[0] ,fMclk,fChipSel,fMiso,fMosi,\wr_data[7] ,\wr_data[6] ,\wr_data[5] ,\wr_data[4] ,\wr_data[3] ,\wr_data[2] ,\wr_data[1] ,\wr_data[0] ,\rd_data[7] ,\rd_data[6] ,\rd_data[5] ,\rd_data[4] ,\rd_data[3] ,\rd_data[2] ,\rd_data[1] ,\rd_data[0] ,\dut/RdDataValid ,\dut/WrDataReady ,cmdHasFinished,\dut/flashState[3] ,\dut/flashState[2] ,\dut/flashState[1] ,\dut/flashState[0] }),
     .clk_i(crystalClk)
 );
 
