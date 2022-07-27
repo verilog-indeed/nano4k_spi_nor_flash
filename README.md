@@ -31,9 +31,9 @@ RSTEN (0x66): Makes the flash chip reset-able through the instruction RST.
 
 RST (0x99): Resets the flash chip.
 
-PP (0x02): Page program, write bytes starting at the given address. If interface is kept active for more than 256 bytes the erase will wrap around to the set address.
+PP (0x02): Page program, write bytes starting at the given address. If interface is kept active for more than 256 bytes the erase will wrap around to the set address. Automatically resets the write enable latch when done.
 
-PE (0x81): Page erase, erases the page that contains the given address, the least significant of the address byte is irrelevant since the entire page (256 bytes) will be erased from 0xXXXX00 to 0xXXXXFF, keep in mind that with flash chips you need to erase a location before you can actually write to it.
+PE (0x81): Page erase, erases the page that contains the given address, the least significant of the address byte is irrelevant since the entire page (256 bytes) will be erased from 0xXXXX00 to 0xXXXXFF, keep in mind that with flash chips you need to erase a location before you can actually write to it. Automatically resets the write enable latch when done.
 
 WREN (0x06):	Set the write enable latch, remember to issue this command before erase/program instructions.
 
