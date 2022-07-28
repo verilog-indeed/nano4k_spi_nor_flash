@@ -11,13 +11,13 @@ To use it, supply a command to the fCommand bus(make sure to only use the comman
 
 When cmdFinished goes high it indicates that the instruction will be completed by the next rising serialClk edge, and the flash interface can be safely disabled without violating the byte boundary for certain instructions like Page Program.
 
-When WrDataReady goes high, it indicates that the flash interface will begin transmitting byte n, and is ready to accept byte n+1 which will sampled 7 serialClk cycles later.
+When WrDataReady goes high, it indicates that the flash interface will begin transmitting byte n, and is ready to accept byte n+1 which will be sampled 7 serialClk cycles later.
 
 When RdDataValid goes high, it indicates that the fData_RD read data is valid and can be sampled safely.
 
 # Currently supported commands
 
-FREAD (0x0B): Read flash data started from supplied address one byte at a time, keep interface active to read up to the entire flash chip if desired, supports a max frequency of about 120MHz but sends a dummy byte before it begins actual reading.
+FREAD (0x0B): Read flash data starting from supplied address one byte at a time, keep interface active to read up to the entire flash chip if desired, supports a max frequency of about 120MHz but sends a dummy byte before it begins actual reading.
 
 RDCR (0x15): Read the flash chip's configuration register. (see pg. 31 of datasheet)
 
@@ -33,7 +33,7 @@ RST (0x99): Resets the flash chip.
 
 PP (0x02): Page program, write bytes starting at the given address. If interface is kept active for more than 256 bytes the erase will wrap around to the set address. Automatically resets the write enable latch when done.
 
-PE (0x81): Page erase, erases the page that contains the given address, the least significant of the address byte is irrelevant since the entire page (256 bytes) will be erased from 0xXXXX00 to 0xXXXXFF, keep in mind that with flash chips you need to erase a location before you can actually write to it. Automatically resets the write enable latch when done.
+PE (0x81): Page erase, erases the page that contains the given address, the least significant byte of the address is irrelevant since the entire page (256 bytes) will be erased from 0xXXXX00 to 0xXXXXFF, keep in mind that with flash chips you need to erase a location before you can actually write to it. Automatically resets the write enable latch when done.
 
 WREN (0x06):	Set the write enable latch, remember to issue this command before erase/program instructions.
 
